@@ -73,3 +73,10 @@ Now more **stable** than the first-generation implementation.
 The kernel driver now **pauses the target process’s threads** before **modifying the debug register**.
 
 ---
+
+## Setting
+
+### A. Turn off the HVCI options
+![initial](https://github.com/lastime1650/Windows_Kernel_Based_GAMEHACKING_Season_2/blob/main/Images/DISABLE_HVCI.png)
+
+### B. Using the KDU Mapper
