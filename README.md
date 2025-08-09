@@ -1,8 +1,6 @@
 # 🖥 Windows Kernel-Based GAMEHACKING Season 2  
-
 [![Open Source Initiative](https://opensource.org/files/osi_keyhole_300X300_90ppi_0.png)](https://opensource.org/)  
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)  
-[![GitHub Repo stars](https://img.shields.io/github/stars/lastime1650/Windows_Kernel_Based_GAMEHACKING_Season_2?style=social)](https://github.com/lastime1650/Windows_Kernel_Based_GAMEHACKING_Season_2)  
 ![Made with Open Source](https://img.shields.io/badge/Made%20with-Open%20Source-blue.svg)  
 
 ---
