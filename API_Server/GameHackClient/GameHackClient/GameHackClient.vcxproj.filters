@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="_GameHack">
+      <UniqueIdentifier>{c9ca168a-a44e-404d-a29e-7930f5832419}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_GameHack\IOCTL">
+      <UniqueIdentifier>{952ede05-c2fb-4cec-8e90-71d23262d8dc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_GameHack\IOCTL\NamedPipe">
+      <UniqueIdentifier>{cadb1a72-e0bf-48c6-8ced-17abb8892981}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_GameHack\WebSocket">
+      <UniqueIdentifier>{b090fbd2-74f6-4563-93a3-d48c3911ee7d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="_GameHack\Converter">
+      <UniqueIdentifier>{5278700b-19cf-4100-a599-546febb748a8}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>_GameHack</Filter>
+    </ClCompile>
+    <ClCompile Include="IOCTL_Manager.cpp">
+      <Filter>_GameHack\IOCTL</Filter>
+    </ClCompile>
+    <ClCompile Include="Converter.cpp">
+      <Filter>_GameHack\Converter</Filter>
+    </ClCompile>
+    <ClCompile Include="base64.cpp">
+      <Filter>_GameHack\Converter</Filter>
+    </ClCompile>
+    <ClCompile Include="Fileio.cpp">
+      <Filter>_GameHack\Converter</Filter>
+    </ClCompile>
+    <ClCompile Include="NamedPipe.cpp">
+      <Filter>_GameHack\IOCTL\NamedPipe</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="IOCTL_Share.h">
+      <Filter>_GameHack\IOCTL</Filter>
+    </ClInclude>
+    <ClInclude Include="IOCTL_Manager.h">
+      <Filter>_GameHack\IOCTL</Filter>
+    </ClInclude>
+    <ClInclude Include="WebSocket.h">
+      <Filter>_GameHack\WebSocket</Filter>
+    </ClInclude>
+    <ClInclude Include="Converter.h">
+      <Filter>_GameHack\Converter</Filter>
+    </ClInclude>
+    <ClInclude Include="base64.h">
+      <Filter>_GameHack\Converter</Filter>
+    </ClInclude>
+    <ClInclude Include="Fileio.h">
+      <Filter>_GameHack\Converter</Filter>
+    </ClInclude>
+    <ClInclude Include="NamedPipe.h">
+      <Filter>_GameHack\IOCTL\NamedPipe</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,24 @@
+﻿  base64.cpp
+  Converter.cpp
+  Fileio.cpp
+  IOCTL_Manager.cpp
+C:\Users\Administrator\source\repos\GameHackClient\GameHackClient\IOCTL_Manager.cpp(163,10): warning C4312: '형식 캐스트': 'DWORD'에서 더 큰 'HANDLE'(으)로의 변환입니다.
+C:\Users\Administrator\source\repos\GameHackClient\GameHackClient\IOCTL_Manager.cpp(239,23): warning C4312: '형식 캐스트': 'DWORD'에서 더 큰 'HANDLE'(으)로의 변환입니다.
+C:\Users\Administrator\source\repos\GameHackClient\GameHackClient\IOCTL_Manager.cpp(366,3): warning C4312: '형식 캐스트': 'DWORD'에서 더 큰 'HANDLE'(으)로의 변환입니다.
+C:\Users\Administrator\source\repos\GameHackClient\GameHackClient\IOCTL_Manager.cpp(440,23): warning C4312: '형식 캐스트': 'DWORD'에서 더 큰 'HANDLE'(으)로의 변환입니다.
+C:\Users\Administrator\source\repos\GameHackClient\GameHackClient\IOCTL_Manager.cpp(502,3): warning C4312: '형식 캐스트': 'DWORD'에서 더 큰 'HANDLE'(으)로의 변환입니다.
+C:\Users\Administrator\source\repos\GameHackClient\GameHackClient\IOCTL_Manager.cpp(604,23): warning C4312: '형식 캐스트': 'DWORD'에서 더 큰 'HANDLE'(으)로의 변환입니다.
+C:\Users\Administrator\source\repos\GameHackClient\GameHackClient\IOCTL_Manager.cpp(664,3): warning C4312: '형식 캐스트': 'DWORD'에서 더 큰 'HANDLE'(으)로의 변환입니다.
+C:\Users\Administrator\source\repos\GameHackClient\GameHackClient\IOCTL_Manager.cpp(836,3): warning C4312: '형식 캐스트': 'DWORD'에서 더 큰 'HANDLE'(으)로의 변환입니다.
+C:\Users\Administrator\source\repos\GameHackClient\GameHackClient\IOCTL_Manager.cpp(871,23): warning C4312: '형식 캐스트': 'DWORD'에서 더 큰 'HANDLE'(으)로의 변환입니다.
+C:\Users\Administrator\source\repos\GameHackClient\GameHackClient\IOCTL_Manager.cpp(923,3): warning C4312: '형식 캐스트': 'DWORD'에서 더 큰 'HANDLE'(으)로의 변환입니다.
+C:\Users\Administrator\source\repos\GameHackClient\GameHackClient\IOCTL_Manager.cpp(1054,36): warning C4312: '형식 캐스트': 'DWORD'에서 더 큰 'HANDLE'(으)로의 변환입니다.
+C:\Users\Administrator\source\repos\GameHackClient\GameHackClient\IOCTL_Manager.cpp(1134,23): warning C4312: '형식 캐스트': 'DWORD'에서 더 큰 'HANDLE'(으)로의 변환입니다.
+  main.cpp
+  NamedPipe.cpp
+C:\Users\Administrator\source\repos\GameHackClient\GameHackClient\NamedPipe.cpp(57,46): warning C4311: '형식 캐스트': 'HANDLE'에서 'DWORD'(으)로 포인터가 잘립니다.
+C:\Users\Administrator\source\repos\GameHackClient\GameHackClient\NamedPipe.cpp(57,46): warning C4302: '형식 캐스트': 'HANDLE'에서 'DWORD'(으)로 잘립니다.
+  코드를 생성하고 있습니다...
+  GameHackClient.vcxproj -> C:\Users\Administrator\source\repos\GameHackClient\x64\Debug\GameHackClient.exe
+  'pwsh.exe'은(는) 내부 또는 외부 명령, 실행할 수 있는 프로그램, 또는
+  배치 파일이 아닙니다.
