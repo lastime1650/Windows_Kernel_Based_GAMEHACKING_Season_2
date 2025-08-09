@@ -19,6 +19,24 @@ It also reinforces the features we built a year ago, and is further implemented 
 
 <br>
 
+## [ What are the features? ] 
+
+<In Kernel>
+1. Kernel Based DLL Injection
+2. * Memory Scan ( with Force mode )
+3. * Memory Write ( with Force mode )
+4. * Memory Dump ( with Force mode )
+
+<br>
+
+<In API Server(IOCTL Requester)>
+1. Websocket API Server
+2. Supported JSON
+
+<br>
+
+*Force mode: Meaning of forcing memory page protection properties to PAGE_EXECUTE_READWRITE
+
 <br>
 
 ## [ UPDATES ]
