@@ -80,3 +80,4 @@ The kernel driver now **pauses the target process’s threads** before **modifyi
 ![initial](https://github.com/lastime1650/Windows_Kernel_Based_GAMEHACKING_Season_2/blob/main/Images/DISABLE_HVCI.png)
 
 ### B. Using the KDU Mapper
+![initial](https://github.com/lastime1650/KernelBased_GAMEHACKING/blob/main/Images/image.png)
