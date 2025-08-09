@@ -1,5 +1,5 @@
 # 🖥 Windows Kernel-Based GAMEHACKING Season 2  
-[![Open Source Initiative](https://opensource.org/files/osi_keyhole_300X300_90ppi_0.png)](https://opensource.org/)  
+[![Open Source Initiative](https://i0.wp.com/opensource.org/wp-content/uploads/2023/03/cropped-OSI-horizontal-large.png)](https://opensource.org/)  
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)  
 ![Made with Open Source](https://img.shields.io/badge/Made%20with-Open%20Source-blue.svg)  
 
