@@ -23,9 +23,9 @@ It also reinforces the features we built a year ago, and is further implemented 
 
 <In Kernel>
 1. Kernel Based DLL Injection
-2. * Memory Scan ( with Force mode )
-3. * Memory Write ( with Force mode )
-4. * Memory Dump ( with Force mode )
+2. Memory Scan ( with Force mode )
+3. Memory Write ( with Force mode )
+4. Memory Dump ( with Force mode )
 
 <br>
 
