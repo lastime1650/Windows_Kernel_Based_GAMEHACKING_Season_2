@@ -1,0 +1,38 @@
+﻿  Building 'NewGameHack' with toolset 'WindowsKernelModeDriver10.0' and the 'Universal' target platform.
+  Stamping x64\Release\NewGameHack.inf
+  Stamping [Version] section with DriverVer=08/09/2025,19.22.37.775
+  DeviceCreate.c
+  DLL_Injection.c
+  GetProcessAPIAddress.c
+  HardwareBP.c
+  IOCTL_ROUTINES.c
+  main.c
+  MemDump.c
+  MemScan.c
+  MemWrite.c
+  New_main.c
+  PE_logic.c
+  Process.c
+  VirtualMemory.c
+  코드를 생성하고 있습니다...
+  NewGameHack.vcxproj -> C:\Users\Administrator\source\repos\NewGameHack\x64\Release\NewGameHack.sys
+  Done Adding Additional Store
+  Successfully signed: C:\Users\Administrator\source\repos\NewGameHack\x64\Release\NewGameHack.sys
+  
+  Driver is 'Universal'.
+  ........................
+  Signability test complete.
+  
+  Errors:
+  None
+  
+  Warnings:
+  None
+  
+  Catalog generation complete.
+  C:\Users\Administrator\source\repos\NewGameHack\x64\Release\NewGameHack\newgamehack.cat
+  Done Adding Additional Store
+  Successfully signed: C:\Users\Administrator\source\repos\NewGameHack\x64\Release\NewGameHack\newgamehack.cat
+  
+  'pwsh.exe'은(는) 내부 또는 외부 명령, 실행할 수 있는 프로그램, 또는
+  배치 파일이 아닙니다.

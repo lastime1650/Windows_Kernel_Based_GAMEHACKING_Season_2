@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Driver Files">
+      <UniqueIdentifier>{8E41214B-6785-4CFE-B992-037D68949A14}</UniqueIdentifier>
+      <Extensions>inf;inv;inx;mof;mc;</Extensions>
+    </Filter>
+    <Filter Include="main">
+      <UniqueIdentifier>{71406f67-8469-48e7-a860-61e3c7bc474a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main\Start">
+      <UniqueIdentifier>{60ff1883-dd72-4a9c-a9d0-5e05a86bb71a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main\Util">
+      <UniqueIdentifier>{90ab8574-d74e-4ba2-ad9d-98179e66aa9b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main\IOCTL">
+      <UniqueIdentifier>{0f8ba2bb-606f-482c-acfb-b1fb973ec53a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main\IOCTL\Creater">
+      <UniqueIdentifier>{873fa371-92c9-4a70-a66d-a02cf49550cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main\IOCTL\Routines">
+      <UniqueIdentifier>{3deb9031-43bc-44ad-a785-62696038e1e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main\GAME_HACKING_SECTION">
+      <UniqueIdentifier>{9c40fdf1-4d3f-474e-92d4-9f4289a8a839}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main\GAME_HACKING_SECTION\Share">
+      <UniqueIdentifier>{b1ad4af7-376e-4e41-945b-13cc4b37cb08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main\GAME_HACKING_SECTION\Share\IOCTL">
+      <UniqueIdentifier>{8e952eed-a435-4ea0-a71d-14c0b1ce1f3f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main\GAME_HACKING_SECTION\Logics">
+      <UniqueIdentifier>{c05c1fc8-089f-47a1-bf8e-ae68532767ae}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main\GAME_HACKING_SECTION\Share\struct">
+      <UniqueIdentifier>{1eeb75ea-cefb-4e8c-9891-e949ac6321dd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main\GAME_HACKING_SECTION\Logics\Memory">
+      <UniqueIdentifier>{b0cdf219-070d-4637-9061-c23b5e248910}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main\GAME_HACKING_SECTION\Logics\Memory\Scan">
+      <UniqueIdentifier>{44f9fc10-adc9-4063-8ed6-21257e43331b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main\GAME_HACKING_SECTION\Logics\Memory\Dump">
+      <UniqueIdentifier>{ac102d42-af82-4357-9945-6492e7820fbc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main\GAME_HACKING_SECTION\Logics\DLL_Injection">
+      <UniqueIdentifier>{092d7082-3b94-431d-98f5-3e51f406002d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main\Util\PE">
+      <UniqueIdentifier>{a86495dc-5781-4ddd-8a17-509cdf48d679}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main\Util\Characters">
+      <UniqueIdentifier>{403ba586-7b17-4c99-8f68-b228fe0e1000}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main\GAME_HACKING_SECTION\Logics\HardwareBreakPoint">
+      <UniqueIdentifier>{62c45be2-e38d-429e-95e9-b065ba49d502}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main\GAME_HACKING_SECTION\Logics\Memory\Write">
+      <UniqueIdentifier>{e16864b6-7187-4edd-ac78-6c9f6f039d72}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main\GAME_HACKING_SECTION\Logics\AttachProcess">
+      <UniqueIdentifier>{238847b9-ba68-4576-82c2-665892883883}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Inf Include="NewGameHack.inf">
+      <Filter>Driver Files</Filter>
+    </Inf>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="API.h">
+      <Filter>main\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="New_main.h">
+      <Filter>main\Start</Filter>
+    </ClInclude>
+    <ClInclude Include="DeviceCreate.h">
+      <Filter>main\IOCTL\Creater</Filter>
+    </ClInclude>
+    <ClInclude Include="IOCTL_ROUTINES.h">
+      <Filter>main\IOCTL\Routines</Filter>
+    </ClInclude>
+    <ClInclude Include="Share_IOCTL.h">
+      <Filter>main\GAME_HACKING_SECTION\Share\IOCTL</Filter>
+    </ClInclude>
+    <ClInclude Include="Process.h">
+      <Filter>main\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="MemScan.h">
+      <Filter>main\GAME_HACKING_SECTION\Logics\Memory\Scan</Filter>
+    </ClInclude>
+    <ClInclude Include="Scan.h">
+      <Filter>main\GAME_HACKING_SECTION\Share\struct</Filter>
+    </ClInclude>
+    <ClInclude Include="MemDump.h">
+      <Filter>main\GAME_HACKING_SECTION\Logics\Memory\Dump</Filter>
+    </ClInclude>
+    <ClInclude Include="VirtualMemory.h">
+      <Filter>main\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="DLL_Injection.h">
+      <Filter>main\GAME_HACKING_SECTION\Logics\DLL_Injection</Filter>
+    </ClInclude>
+    <ClInclude Include="PE_logic.h">
+      <Filter>main\Util\PE</Filter>
+    </ClInclude>
+    <ClInclude Include="PE_parse.h">
+      <Filter>main\Util\PE</Filter>
+    </ClInclude>
+    <ClInclude Include="DLLInjection.h">
+      <Filter>main\GAME_HACKING_SECTION\Share\struct</Filter>
+    </ClInclude>
+    <ClInclude Include="HardwareBP.h">
+      <Filter>main\GAME_HACKING_SECTION\Logics\HardwareBreakPoint</Filter>
+    </ClInclude>
+    <ClInclude Include="Hardware_BP.h">
+      <Filter>main\GAME_HACKING_SECTION\Share\struct</Filter>
+    </ClInclude>
+    <ClInclude Include="Write.h">
+      <Filter>main\GAME_HACKING_SECTION\Share\struct</Filter>
+    </ClInclude>
+    <ClInclude Include="MemWrite.h">
+      <Filter>main\GAME_HACKING_SECTION\Logics\Memory\Write</Filter>
+    </ClInclude>
+    <ClInclude Include="dump.h">
+      <Filter>main\GAME_HACKING_SECTION\Share\struct</Filter>
+    </ClInclude>
+    <ClInclude Include="GetProcessAPIAddress.h">
+      <Filter>main\GAME_HACKING_SECTION\Logics\AttachProcess</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="New_main.c">
+      <Filter>main\Start</Filter>
+    </ClCompile>
+    <ClCompile Include="main.c">
+      <Filter>main</Filter>
+    </ClCompile>
+    <ClCompile Include="DeviceCreate.c">
+      <Filter>main\IOCTL\Creater</Filter>
+    </ClCompile>
+    <ClCompile Include="IOCTL_ROUTINES.c">
+      <Filter>main\IOCTL\Routines</Filter>
+    </ClCompile>
+    <ClCompile Include="Process.c">
+      <Filter>main\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="MemScan.c">
+      <Filter>main\GAME_HACKING_SECTION\Logics\Memory\Scan</Filter>
+    </ClCompile>
+    <ClCompile Include="MemDump.c">
+      <Filter>main\GAME_HACKING_SECTION\Logics\Memory\Dump</Filter>
+    </ClCompile>
+    <ClCompile Include="VirtualMemory.c">
+      <Filter>main\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="DLL_Injection.c">
+      <Filter>main\GAME_HACKING_SECTION\Logics\DLL_Injection</Filter>
+    </ClCompile>
+    <ClCompile Include="PE_logic.c">
+      <Filter>main\Util\PE</Filter>
+    </ClCompile>
+    <ClCompile Include="HardwareBP.c">
+      <Filter>main\GAME_HACKING_SECTION\Logics\HardwareBreakPoint</Filter>
+    </ClCompile>
+    <ClCompile Include="MemWrite.c" />
+    <ClCompile Include="GetProcessAPIAddress.c">
+      <Filter>main\GAME_HACKING_SECTION\Logics\AttachProcess</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

@@ -1,0 +1,62 @@
+;
+; NewGameHack.inf
+;
+
+[Version]
+Signature   = "$WINDOWS NT$"
+Class       = System ; TODO: specify appropriate Class
+ClassGuid   = {4d36e97d-e325-11ce-bfc1-08002be10318} ; TODO: specify appropriate ClassGuid
+Provider    = %ManufacturerName%
+CatalogFile = NewGameHack.cat
+DriverVer = 08/09/2025,19.22.37.775
+PnpLockdown = 1
+
+[DestinationDirs]
+DefaultDestDir = 13
+
+[SourceDisksNames]
+1 = %DiskName%,,,""
+
+[SourceDisksFiles]
+NewGameHack.sys = 1,,
+
+;*****************************************
+; Install Section
+;*****************************************
+
+[Manufacturer]
+%ManufacturerName% = Standard,NTamd64.10.0...16299 ; %13% support introduced in build 16299
+
+[Standard.NTamd64.10.0...16299]
+%NewGameHack.DeviceDesc% = NewGameHack_Device, Root\NewGameHack ; TODO: edit hw-id
+
+[NewGameHack_Device.NT]
+CopyFiles = File_Copy
+
+[File_Copy]
+NewGameHack.sys
+
+;-------------- Service installation
+[NewGameHack_Device.NT.Services]
+AddService = NewGameHack,%SPSVCINST_ASSOCSERVICE%, NewGameHack_Service_Inst
+
+; -------------- NewGameHack driver install sections
+[NewGameHack_Service_Inst]
+DisplayName    = %NewGameHack.SVCDESC%
+ServiceType    = 1               ; SERVICE_KERNEL_DRIVER
+StartType      = 3               ; SERVICE_DEMAND_START
+ErrorControl   = 1               ; SERVICE_ERROR_NORMAL
+ServiceBinary  = %13%\NewGameHack.sys
+
+[NewGameHack_Device.NT.Wdf]
+KmdfService = NewGameHack, NewGameHack_wdfsect
+
+[NewGameHack_wdfsect]
+KmdfLibraryVersion = 1.15
+
+[Strings]
+SPSVCINST_ASSOCSERVICE = 0x00000002
+ManufacturerName = "<Your manufacturer name>" ;TODO: Replace with your manufacturer name
+DiskName = "NewGameHack Installation Disk"
+NewGameHack.DeviceDesc = "NewGameHack Device"
+NewGameHack.SVCDESC = "NewGameHack Service"

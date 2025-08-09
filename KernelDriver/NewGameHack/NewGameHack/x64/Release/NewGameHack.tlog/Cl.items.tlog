@@ -1,0 +1,13 @@
+C:\Users\Administrator\source\repos\NewGameHack\NewGameHack\DeviceCreate.c;C:\Users\Administrator\source\repos\NewGameHack\NewGameHack\x64\Release\DeviceCreate.obj
+C:\Users\Administrator\source\repos\NewGameHack\NewGameHack\DLL_Injection.c;C:\Users\Administrator\source\repos\NewGameHack\NewGameHack\x64\Release\DLL_Injection.obj
+C:\Users\Administrator\source\repos\NewGameHack\NewGameHack\GetProcessAPIAddress.c;C:\Users\Administrator\source\repos\NewGameHack\NewGameHack\x64\Release\GetProcessAPIAddress.obj
+C:\Users\Administrator\source\repos\NewGameHack\NewGameHack\HardwareBP.c;C:\Users\Administrator\source\repos\NewGameHack\NewGameHack\x64\Release\HardwareBP.obj
+C:\Users\Administrator\source\repos\NewGameHack\NewGameHack\IOCTL_ROUTINES.c;C:\Users\Administrator\source\repos\NewGameHack\NewGameHack\x64\Release\IOCTL_ROUTINES.obj
+C:\Users\Administrator\source\repos\NewGameHack\NewGameHack\main.c;C:\Users\Administrator\source\repos\NewGameHack\NewGameHack\x64\Release\main.obj
+C:\Users\Administrator\source\repos\NewGameHack\NewGameHack\MemDump.c;C:\Users\Administrator\source\repos\NewGameHack\NewGameHack\x64\Release\MemDump.obj
+C:\Users\Administrator\source\repos\NewGameHack\NewGameHack\MemScan.c;C:\Users\Administrator\source\repos\NewGameHack\NewGameHack\x64\Release\MemScan.obj
+C:\Users\Administrator\source\repos\NewGameHack\NewGameHack\MemWrite.c;C:\Users\Administrator\source\repos\NewGameHack\NewGameHack\x64\Release\MemWrite.obj
+C:\Users\Administrator\source\repos\NewGameHack\NewGameHack\New_main.c;C:\Users\Administrator\source\repos\NewGameHack\NewGameHack\x64\Release\New_main.obj
+C:\Users\Administrator\source\repos\NewGameHack\NewGameHack\PE_logic.c;C:\Users\Administrator\source\repos\NewGameHack\NewGameHack\x64\Release\PE_logic.obj
+C:\Users\Administrator\source\repos\NewGameHack\NewGameHack\Process.c;C:\Users\Administrator\source\repos\NewGameHack\NewGameHack\x64\Release\Process.obj
+C:\Users\Administrator\source\repos\NewGameHack\NewGameHack\VirtualMemory.c;C:\Users\Administrator\source\repos\NewGameHack\NewGameHack\x64\Release\VirtualMemory.obj
