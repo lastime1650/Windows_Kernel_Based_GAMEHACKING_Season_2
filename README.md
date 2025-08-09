@@ -2,10 +2,10 @@
 Game Hacking Season 2 has been released.  As much as possible, I'd like to make sure that the title is "Window The kernel driver implements the maximum implementable functionality.  In addition, the IOCTL requester user program can easily request the kernel with just JSON.
 
 ## [ Welcome ]
-#[!initial](https://github.com/lastime1650/Windows_Kernel_Based_GAMEHACKING_Season_2/blob/main/Images/Windows_KernelBased_GAMEHACK_LOGO.png)
+![initial](https://github.com/lastime1650/Windows_Kernel_Based_GAMEHACKING_Season_2/blob/main/Images/Windows_KernelBased_GAMEHACK_LOGO.png)
 
 ## [ HOW IT WORKS? ]
-#[!initial](https://github.com/lastime1650/Windows_Kernel_Based_GAMEHACKING_Season_2/blob/main/Images/Windows_KernelBased_GAMEHACK_LOGO.png)
+![initial](https://github.com/lastime1650/Windows_Kernel_Based_GAMEHACKING_Season_2/blob/main/Images/SimpleArch.png)
 
 <br>
 
