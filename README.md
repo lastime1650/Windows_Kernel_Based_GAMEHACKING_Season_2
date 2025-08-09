@@ -38,6 +38,7 @@ In addition, the features built a year ago have been **reinforced** and further 
 2. **Memory Scan** *(with Force Mode)*
 3. **Memory Write** *(with Force Mode)*
 4. **Memory Dump** *(with Force Mode)*
+5. **Hardware Breakpoint** *(The VEH handler must implement the EXCEPTION_SINGLE_STEP handler.)*
 
 ---
 
