@@ -1,45 +1,51 @@
-# Windows_Kernel_Based_GAMEHACKING_Season_2
-Game Hacking Season 2 has been released.  As much as possible, I'd like to make sure that the title is "Window The kernel driver implements the maximum implementable functionality.  In addition, the IOCTL requester user program can easily request the kernel with just JSON.
+# 🖥 Windows Kernel-Based GAMEHACKING Season 2
 
-## [ Welcome ]
-![initial](https://github.com/lastime1650/Windows_Kernel_Based_GAMEHACKING_Season_2/blob/main/Images/Windows_KernelBased_GAMEHACK_LOGO.png)
+**Game Hacking Season 2** is now released!  
+This version aims to **implement the maximum capabilities possible in a Windows kernel driver** while allowing the `IOCTL` requester (User Program) to send commands easily to the kernel using **JSON**.
 
-## [ HOW IT WORKS? ]
-![initial](https://github.com/lastime1650/Windows_Kernel_Based_GAMEHACKING_Season_2/blob/main/Images/SimpleArch.png)
-I used MFC before, but I switched to API server for easier user experience.
-For example, an API that allows access to the Windows kernel via Python is provided on a WebSocket basis.
+---
 
-<br>
+## 📌 Welcome
+![Windows KernelBased GAMEHACK Logo](https://github.com/lastime1650/Windows_Kernel_Based_GAMEHACKING_Season_2/blob/main/Images/Windows_KernelBased_GAMEHACK_LOGO.png)
 
-The goal is to be able to control the kernel at a high level.
+---
 
-<br>
+## ⚙ How It Works?
+![Architecture](https://github.com/lastime1650/Windows_Kernel_Based_GAMEHACKING_Season_2/blob/main/Images/SimpleArch.png)
 
-It also reinforces the features we built a year ago, and is further implemented to allow the kernel to interact more aggressively with the user space.
+Previously, **MFC** was used, but now it has been replaced with an **API server** approach for a more user-friendly experience.  
+For example, a **WebSocket-based API** is provided, allowing access to the Windows kernel directly from **Python**.
 
-<br>
+> **Goal:** Enable **high-level control** over the Windows kernel.
 
-## [ What are the features? ] 
+In addition, the features built a year ago have been **reinforced** and further developed so that the kernel can interact **more aggressively** with user space.
 
-<In Kernel>
-1. Kernel Based DLL Injection
-2. Memory Scan ( with Force mode )
-3. Memory Write ( with Force mode )
-4. Memory Dump ( with Force mode )
+---
 
-<br>
+## 🚀 Features
 
-<In API Server(IOCTL Requester)>
-1. Websocket API Server
-2. Supported JSON
+### 🔹 In Kernel
+1. **Kernel-Based DLL Injection**
+2. **Memory Scan** *(with Force Mode)*
+3. **Memory Write** *(with Force Mode)*
+4. **Memory Dump** *(with Force Mode)*
 
-<br>
+---
 
-*Force mode: Meaning of forcing memory page protection properties to PAGE_EXECUTE_READWRITE
+### 🔹 In API Server (IOCTL Requester)
+1. **WebSocket API Server**
+2. **JSON Support**
 
-<br>
+---
 
-## [ UPDATES ]
+💡 **Force Mode:** Forces the memory page protection property to **`PAGE_EXECUTE_READWRITE`**.
 
-### ( 2025-08-09 ) - * Improved "Hardware Breakpoint" *
-Now, in a form that is a little more "stable" than the previous first generation, we have improved the kernel driver to stop the threads of the user process and then modify the debug register.
+---
+
+## 📅 Updates
+
+### (2025-08-09) — *Improved "Hardware Breakpoint"*
+Now more **stable** than the first-generation implementation.  
+The kernel driver now **pauses the target process’s threads** before **modifying the debug register**.
+
+---
