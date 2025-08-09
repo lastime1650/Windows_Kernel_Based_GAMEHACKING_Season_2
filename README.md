@@ -63,7 +63,12 @@ In addition, the features built a year ago have been **reinforced** and further 
 
 ## 📅 Updates
 
-### (2025-08-09) — *Improved "Hardware Breakpoint"*
+### (2025-08-09 - 19:00) — *Added "Memory ALL Scan"*
+When it provides a size, by default, copy data from the **`PAGE_READWRITE`** area and import it to the node.
+
+<br>
+
+### (2025-08-09 - 15:00) — *Improved "Hardware Breakpoint"*
 Now more **stable** than the first-generation implementation.  
 The kernel driver now **pauses the target process’s threads** before **modifying the debug register**.
 
