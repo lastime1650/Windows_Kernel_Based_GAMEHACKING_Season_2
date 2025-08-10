@@ -1,0 +1,14 @@
+﻿  pch.cpp
+  dllmain.cpp
+  NamedPipe.cpp
+  VEH_Handler.cpp
+C:\Users\Administrator\source\repos\GameHackDLL\GameHackDLL\VEH_Handler.cpp(6,22): warning C4312: '형식 캐스트': 'DWORD'에서 더 큰 'HANDLE'(으)로의 변환입니다.
+  (소스 파일 '/VEH_Handler.cpp'을(를) 컴파일하는 중)
+  
+  코드를 생성하고 있습니다.
+  Previous IPDB not found, fall back to full compilation.
+  All 9 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  코드를 생성했습니다.
+  GameHackDLL.vcxproj -> C:\Users\Administrator\source\repos\GameHackDLL\x64\Release\GameHackDLL.dll
+  'pwsh.exe'은(는) 내부 또는 외부 명령, 실행할 수 있는 프로그램, 또는
+  배치 파일이 아닙니다.
