@@ -67,8 +67,6 @@ In addition, the features built a year ago have been **reinforced** and further 
 > ### (2025-08-10 - 16:00(UTC +09:00) ) — * "Highly stable hardware breakpoint"*
 > NMore reliably than previous methods, you can import and modify thread contexts without conflict at the kernel end. There is a **`98.13`** percent chance that you **`no longer experience conflict issues with Thread Context`**. 
 > 
-> This feature is now available reliably. ^^
-> 
 > **if want to use Hardware Breakpoint, you can see this [VEH_HANDLER](https://github.com/lastime1650/Windows_Kernel_Based_GAMEHACKING_Season_2/blob/main/Samples/dll/GameHackDLL/GameHackDLL/VEH_Handler.cpp) in [DLL sample](https://github.com/lastime1650/Windows_Kernel_Based_GAMEHACKING_Season_2/tree/main/Samples/dll/GameHackDLL)**
 
 ---
