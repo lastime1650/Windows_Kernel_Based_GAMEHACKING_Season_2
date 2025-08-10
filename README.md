@@ -44,7 +44,7 @@ In addition, the features built a year ago have been **reinforced** and further 
 > [!IMPORTANT]
 > 
 > 1. Disabled HVCI
-> 2. Load [KernelDriver](https://github.com/lastime1650/Windows_Kernel_Based_GAMEHACKING_Season_2/tree/main/KernelDriver/NewGameHack/x64/Release/NewGameHack) with KDUMapper
+> 2. Load [KernelDriver](https://github.com/lastime1650/Windows_Kernel_Based_GAMEHACKING_Season_2/tree/main/KernelDriver/NewGameHack/x64/Release/NewGameHack) with [KDUMapper](https://github.com/hfiref0x/KDU)
 > 3. Execute the [API_server](https://github.com/lastime1650/Windows_Kernel_Based_GAMEHACKING_Season_2/tree/main/API_Server/GameHackClient/x64/Debug)
 > 
 
