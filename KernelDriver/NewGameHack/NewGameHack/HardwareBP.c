@@ -29,7 +29,7 @@ NTSTATUS Set_Hardware_BreakPoint(
 	);
 	if (!NT_SUCCESS(status))
 		return status;
-	HANDLE returned_userthread_handle = NULL;
+	//HANDLE returned_userthread_handle = NULL;
 
 	PProcess_info TargetProcess = NULL;
 	status = GetProcessInfoByProcessId(ProcessId, &TargetProcess);
@@ -85,6 +85,7 @@ NTSTATUS Set_Hardware_BreakPoint(
 				KAPC_STATE APC_STATE = { 0, };
 				KeStackAttachProcess(TargetProcess->ProcessObject, &APC_STATE); // Attach to the target process context
 
+				/*
 				HANDLE pUserThreadHandle = NULL;
 				status = ObOpenObjectByPointer(
 					Thread,
@@ -92,7 +93,7 @@ NTSTATUS Set_Hardware_BreakPoint(
 					NULL,
 					THREAD_ALL_ACCESS,
 					*PsThreadType,
-					KernelMode,
+					UserMode,
 					&pUserThreadHandle
 				);
 				if (!NT_SUCCESS(status)) {
@@ -103,19 +104,30 @@ NTSTATUS Set_Hardware_BreakPoint(
 					threadInfo++;
 					continue;
 				}
-
+				*/
 				/*
 				
-					Suspend Process Thread
+					Suspend Process/Thread
 				
 				*/
 				
+				/*
 				Call_2_User_Thread(
 					TargetProcess->ProcessHandle,
 					TargetProcess_APIs.SuspendThread_Address,
 					(PVOID)pUserThreadHandle, // 주소가 아닌, HANDLE 그대로 값 전달해야한다.
 					&returned_userthread_handle
-				);
+				);*/
+				status = PsSuspendProcess(TargetProcess->ProcessObject);
+				if (!NT_SUCCESS(status)) {
+					KeUnstackDetachProcess(&APC_STATE);
+
+					DbgPrintEx(DPFLTR_IHVDRIVER_ID, DPFLTR_ERROR_LEVEL, " PsSuspendProcess 실패 \n");
+					ObDereferenceObject(Thread); // Dereference PETHREAD
+					threadInfo++;
+					continue;
+				}
+
 				
 
 
@@ -141,11 +153,23 @@ NTSTATUS Set_Hardware_BreakPoint(
 
 				status = PsGetContextThread(Thread, context_USERMODE, UserMode);
 				if (!NT_SUCCESS(status)) {
+
+					PsResumeProcess(TargetProcess->ProcessObject);
+
 					KeUnstackDetachProcess(&APC_STATE); // Detach from the target process context
 
 					DbgPrintEx(DPFLTR_IHVDRIVER_ID, DPFLTR_ERROR_LEVEL, " 스레드 컨텍스트 얻기 실패 \n");
 					ObCloseHandle(ThreadHandle, KernelMode);
 					ObDereferenceObject(Thread); // Dereference PETHREAD
+
+					/*
+					status = Call_2_User_Thread(
+						TargetProcess->ProcessHandle,
+						TargetProcess_APIs.ResumeThread_Address,
+						(PVOID)pUserThreadHandle, // 주소가 아닌, HANDLE 그대로 값 전달해야한다.
+						&returned_userthread_handle
+					);*/
+
 					threadInfo++;
 					continue;
 				}
@@ -228,6 +252,9 @@ NTSTATUS Set_Hardware_BreakPoint(
 
 				PsSetContextThread(Thread, context_USERMODE, UserMode);
 
+				PsResumeProcess(TargetProcess->ProcessObject);
+
+
 				KeUnstackDetachProcess(&APC_STATE); // Detach from the target process context
 
 				/*
@@ -235,13 +262,15 @@ NTSTATUS Set_Hardware_BreakPoint(
 					Resume User Thread
 				
 				*/
-				Call_2_User_Thread(
+
+				/*
+				status = Call_2_User_Thread(
 					TargetProcess->ProcessHandle,
 					TargetProcess_APIs.ResumeThread_Address,
 					(PVOID)pUserThreadHandle, // 주소가 아닌, HANDLE 그대로 값 전달해야한다.
 					&returned_userthread_handle
-				);
-
+				);*/
+				
 				ObDereferenceObject(Thread); // Dereference PETHREAD
 				threadInfo++;
 

@@ -142,8 +142,6 @@ NTSTATUS NewScanning(
 
 	*ScannedStartNode = Requester__StartNode;
 
-	goto EXIT_1;
-
 EXIT_1:
 
 	if (Requester_processInfo)

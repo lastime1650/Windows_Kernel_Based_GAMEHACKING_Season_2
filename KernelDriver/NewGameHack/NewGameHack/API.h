@@ -17,6 +17,13 @@ IoCreateDriver(
     _In_ PDRIVER_INITIALIZE InitializationFunction // New DriveEntry Function 
 );
 
+NTSTATUS NTAPI PsSuspendProcess(
+    _In_ PEPROCESS Process
+);
+
+NTSTATUS NTAPI PsResumeProcess(
+    _In_ PEPROCESS Process
+);
 
 NTSTATUS
 NTAPI

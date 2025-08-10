@@ -101,7 +101,4 @@ typedef struct AllScan {
 
 
 
-
-
-
 #endif
