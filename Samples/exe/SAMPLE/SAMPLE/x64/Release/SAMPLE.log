@@ -1,0 +1,12 @@
+﻿  main.c
+C:\Users\Administrator\source\repos\SAMPLE\SAMPLE\main.c(69,9): warning C4477: 'printf' : 서식 문자열 '%d'에 'int' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'HANDLE'입니다.
+C:\Users\Administrator\source\repos\SAMPLE\SAMPLE\main.c(69,9): warning C4313: 'printf': 서식 문자열의 '%d'이(가) HANDLE' 형식의 인수 1과(와) 충돌합니다.
+C:\Users\Administrator\source\repos\SAMPLE\SAMPLE\main.c(163,10): warning C4477: 'printf' : 서식 문자열 '%p'에 'void *' 형식의 인수가 필요하지만 variadic 인수 1의 형식이 'DWORD64'입니다.
+  코드를 생성하고 있습니다.
+  1 of 4 functions (25.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  코드를 생성했습니다.
+  SAMPLE.vcxproj -> C:\Users\Administrator\source\repos\SAMPLE\x64\Release\SAMPLE.exe
+  'pwsh.exe'은(는) 내부 또는 외부 명령, 실행할 수 있는 프로그램, 또는
+  배치 파일이 아닙니다.
