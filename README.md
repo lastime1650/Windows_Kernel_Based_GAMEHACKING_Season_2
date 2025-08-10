@@ -43,7 +43,7 @@ In addition, the features built a year ago have been **reinforced** and further 
 
 ### 🔹 In Kernel
 1. **Kernel-Based DLL Injection**
-2. **Memory Scan** *(with Force Mode)*
+2. **Memory Scan** 
 3. **Memory Write** *(with Force Mode)*
 4. **Memory Dump** *(with Force Mode)*
 5. **Kernel-Based Hardware Breakpoint** *`(The VEH handler must implement the EXCEPTION_SINGLE_STEP handler.)`*
