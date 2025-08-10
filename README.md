@@ -39,6 +39,25 @@ In addition, the features built a year ago have been **reinforced** and further 
 
 ---
 
+## ⚙ so How can I use it?
+
+1. Disabled HVCI
+2. Load [KernelDriver](https://github.com/lastime1650/Windows_Kernel_Based_GAMEHACKING_Season_2/tree/main/KernelDriver/NewGameHack/x64/Release/NewGameHack) with KDUMapper
+3. Execute the [API_server](https://github.com/lastime1650/Windows_Kernel_Based_GAMEHACKING_Season_2/tree/main/API_Server/GameHackClient/x64/Debug)
+
+
+
+## Disabled HVCI 
+
+### A. Turn off the HVCI options
+![initial](https://github.com/lastime1650/Windows_Kernel_Based_GAMEHACKING_Season_2/blob/main/Images/DISABLE_HVCI.png)
+
+### B. Using the KDU Mapper
+![initial](https://github.com/lastime1650/KernelBased_GAMEHACKING/blob/main/Images/image.png)
+
+
+---
+
 ## 🚀 Features
 
 ### 🔹 In Kernel
@@ -81,14 +100,6 @@ In addition, the features built a year ago have been **reinforced** and further 
 > The kernel driver now **pauses the target process’s threads** before **modifying the debug register**.
 
 ---
-
-## Setting
-
-### A. Turn off the HVCI options
-![initial](https://github.com/lastime1650/Windows_Kernel_Based_GAMEHACKING_Season_2/blob/main/Images/DISABLE_HVCI.png)
-
-### B. Using the KDU Mapper
-![initial](https://github.com/lastime1650/KernelBased_GAMEHACKING/blob/main/Images/image.png)
 
 
 
