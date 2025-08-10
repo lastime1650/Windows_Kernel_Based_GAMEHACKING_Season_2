@@ -75,6 +75,7 @@ In addition, the features built a year ago have been **reinforced** and further 
 ### 🔹 In API Server (IOCTL Requester)
 1. **WebSocket API Server**
 2. **JSON Support**
+3. **WebServer on API Server** (coming soon)
 
 ---
 
