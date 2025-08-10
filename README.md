@@ -40,6 +40,8 @@ In addition, the features built a year ago have been **reinforced** and further 
 ---
 
 ## ⚙ so How can I use it?
+
+> [!IMPORTANT]
 > 
 > 1. Disabled HVCI
 > 2. Load [KernelDriver](https://github.com/lastime1650/Windows_Kernel_Based_GAMEHACKING_Season_2/tree/main/KernelDriver/NewGameHack/x64/Release/NewGameHack) with KDUMapper
