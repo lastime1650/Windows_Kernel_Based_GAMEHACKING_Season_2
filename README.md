@@ -46,7 +46,8 @@ In addition, the features built a year ago have been **reinforced** and further 
 > 1. Disabled HVCI
 > 2. Load [KernelDriver](https://github.com/lastime1650/Windows_Kernel_Based_GAMEHACKING_Season_2/tree/main/KernelDriver/NewGameHack/x64/Release/NewGameHack) with [KDUMapper](https://github.com/hfiref0x/KDU)
 > 3. Execute the [API_server](https://github.com/lastime1650/Windows_Kernel_Based_GAMEHACKING_Season_2/tree/main/API_Server/GameHackClient/x64/Debug)
-> 
+> 4. and then, you should be made a query tool (query to `API SERVER` in JSON format) ( Python ,, etc,, ) enjoy!
+> 5. if you have some bug ( BSOD ), call me !
 
 
 ## Disabled HVCI 
