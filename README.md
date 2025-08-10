@@ -63,12 +63,14 @@ In addition, the features built a year ago have been **reinforced** and further 
 
 ## 📅 Updates
 
-### (2025-08-10 - 16:00(UTC +09:00) ) — * "Highly stable hardware breakpoints"*
+### (2025-08-10 - 16:00(UTC +09:00) ) — * "Highly stable hardware breakpoint"*
 NMore reliably than previous methods, you can import and modify thread contexts without conflict at the kernel end. There is a **`98.13`** percent chance that you **`no longer experience conflict issues with Thread Context`**. 
 
 <br>
 
 This feature is now available reliably. ^^
+
+**if want to use Hardware Breakpoint, you can see this [DLL sample](https://github.com/lastime1650/Windows_Kernel_Based_GAMEHACKING_Season_2/tree/main/Samples/dll/GameHackDLL)**
 
 ### (2025-08-09 - 19:00(UTC +09:00)  ) — *Added "Memory ALL Scan"*
 When it provides a size, by default, copy data from the **`PAGE_READWRITE`** area and import it to the node.
