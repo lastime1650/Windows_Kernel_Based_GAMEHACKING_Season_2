@@ -5,6 +5,11 @@
 
 ---
 
+# I'm going to officially release a stable distribution version. Please wait a little bit !!
+
+`Also, provide instructions with API usage (with Python).`
+
+---
 
 # 🖥 Windows Kernel-Based GAMEHACKING Season 2  
 
