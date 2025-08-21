@@ -11,7 +11,7 @@
 
 ---
 
-# 🖥 Windows Kernel-Based GAMEHACKING Season 2  
+# 🖥 `64Bit` Windows Kernel-Based GAMEHACKING Season 2  
 
 <a href="https://opensource.org/">
     <img src="https://i0.wp.com/opensource.org/wp-content/uploads/2023/03/cropped-OSI-horizontal-large.png" alt="Open Source Initiative" width="250"/>
