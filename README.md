@@ -77,6 +77,7 @@ In addition, the features built a year ago have been **reinforced** and further 
 4. **Memory Dump** *(with Memory PAGE dump(optional) )*
 5. **Kernel-Based Hardware Breakpoint** *`(The VEH handler must implement the EXCEPTION_SINGLE_STEP handler.)`*
 6. **Memory ALL Scan** -> value to return all datas in gave that size
+7. **Pointer Scan**
 
 ---
 
