@@ -94,11 +94,19 @@ In addition, the features built a year ago have been **reinforced** and further 
 ## 📅 Updates
 
 > [!NOTE]
+> ### (2025-08-22 - 03:40(UTC +09:00) ) — * "Kernel Based Pointer Scanner is opened !"*
+> I have implemented a "pointer scanner" that works on a kernel basis in version 2 of this season
+>
+> Additionally, the .data and .rdata areas are implemented to simply extract paths in JSON-type APIs with a "fixed offset" for one variable address found in EXE and dll (except Windows System dll) loaded into target process memory.
+
+
+---
+
 > ### (2025-08-10 - 16:00(UTC +09:00) ) — * "Highly stable hardware breakpoint"*
 > NMore reliably than previous methods, you can import and modify thread contexts without conflict at the kernel end. There is a **`98.13`** percent chance that you **`no longer experience conflict issues with Thread Context`**. 
 > 
 > **if want to use Hardware Breakpoint, you can see this [VEH_HANDLER](https://github.com/lastime1650/Windows_Kernel_Based_GAMEHACKING_Season_2/blob/main/Samples/dll/GameHackDLL/GameHackDLL/VEH_Handler.cpp) in [DLL sample](https://github.com/lastime1650/Windows_Kernel_Based_GAMEHACKING_Season_2/tree/main/Samples/dll/GameHackDLL)**
-
+> Preview) Kernel returns a path based on a "Linked list" to the user mode process, which converts it to JSON to give you results.
 ---
 
 > ### (2025-08-09 - 19:00(UTC +09:00)  ) — *Added "Memory ALL Scan"*
