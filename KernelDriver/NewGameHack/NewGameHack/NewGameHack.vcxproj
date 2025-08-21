@@ -90,6 +90,10 @@
     <DriverSign>
       <FileDigestAlgorithm>sha256</FileDigestAlgorithm>
     </DriverSign>
+    <Link>
+      <AdditionalOptions>/integritycheck %(AdditionalOptions)</AdditionalOptions>
+    </Link>
+    <ClCompile />
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM64'">
     <DriverSign>
@@ -109,6 +113,9 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="API.h" />
+    <ClInclude Include="API_FunctionPointers.h" />
+    <ClInclude Include="KEVENT_or_KMUTEX_init.h" />
+    <ClInclude Include="NotifyRoutines.h" />
     <ClInclude Include="DeviceCreate.h" />
     <ClInclude Include="DLLInjection.h" />
     <ClInclude Include="DLL_Injection.h" />
@@ -123,13 +130,18 @@
     <ClInclude Include="New_main.h" />
     <ClInclude Include="PE_logic.h" />
     <ClInclude Include="PE_parse.h" />
+    <ClInclude Include="PointerScan.h" />
     <ClInclude Include="Process.h" />
+    <ClInclude Include="ProcessMonitor.h" />
     <ClInclude Include="Scan.h" />
     <ClInclude Include="Share_IOCTL.h" />
     <ClInclude Include="VirtualMemory.h" />
     <ClInclude Include="Write.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="API.c" />
+    <ClCompile Include="KEVENT_or_KMUTEX_init_logic.c" />
+    <ClCompile Include="NotifyRoutines.c" />
     <ClCompile Include="DeviceCreate.c" />
     <ClCompile Include="DLL_Injection.c" />
     <ClCompile Include="GetProcessAPIAddress.c" />
@@ -141,7 +153,9 @@
     <ClCompile Include="MemWrite.c" />
     <ClCompile Include="New_main.c" />
     <ClCompile Include="PE_logic.c" />
+    <ClCompile Include="PointerScan.c" />
     <ClCompile Include="Process.c" />
+    <ClCompile Include="ProcessMonitor.c" />
     <ClCompile Include="VirtualMemory.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

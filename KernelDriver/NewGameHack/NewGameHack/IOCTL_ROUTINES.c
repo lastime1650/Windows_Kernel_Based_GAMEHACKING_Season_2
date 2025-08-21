@@ -11,7 +11,7 @@ NTSTATUS RequiredRoutine(PDEVICE_OBJECT pDeviceObject, PIRP Irp) {
 
 #include "Share_IOCTL.h" // IOCTL Code Definitions
 
-
+#include "PointerScan.h"
 #include "MemWrite.h"
 #include "MemDump.h"
 #include "HardwareBP.h"
@@ -159,6 +159,8 @@ NTSTATUS IOCTLRoutine(PDEVICE_OBJECT pDeviceObject, PIRP Irp) {
 				Parameter->StartAddress,
 				Parameter->Size,
 
+				Parameter->is_with_page_dump,
+
 				& OutputDump
 			);
 
@@ -245,6 +247,35 @@ NTSTATUS IOCTLRoutine(PDEVICE_OBJECT pDeviceObject, PIRP Irp) {
 				Parameter->RequesterPID,
 				Parameter->TargetPID,
 				Parameter->value_size,
+				&output
+			);
+
+			Parameter->Output = output;
+
+			Irp->IoStatus.Status = status;
+			Irp->IoStatus.Information = Parameter_Size;
+
+			break;
+		}
+		case IOCTL_POINTERSCAN:
+		{
+			// DLL, EXE 등 실행파일에서 .data 및 .rdata 영역을 포함한 포인터를 스캔하고 연결리스트 시작주소를 반환한다.
+
+			PPointerScan Parameter = (PPointerScan)Irp->AssociatedIrp.SystemBuffer; // Get System Buffer
+			ULONG Parameter_Size = irpSp->Parameters.DeviceIoControl.InputBufferLength; // Get Input Buffer Length
+
+			PPointerScannedNode output = NULL;
+			
+			status = PointerScanning(
+				Parameter->RequesterPID,
+				Parameter->TargetPID,
+				(PVOID)Parameter->TargetAddress,
+				Parameter->MaxDepth,
+				Parameter->NumThreads,
+				Parameter->MaxBaseOffset,
+				Parameter->MaxChainOffset,
+				Parameter->MinPointersInPeek,
+
 				&output
 			);
 

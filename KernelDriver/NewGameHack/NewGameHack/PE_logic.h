@@ -42,5 +42,33 @@ NTSTATUS Dll_API_Address_Search(
 	PUCHAR* API_VirtualAddress // API Address in Dll Base Address
 );
 
+typedef struct ImageSectionInformation {
+
+    CHAR SectionName[256]; // ".data", ".rdata" 같은 것들
+
+    PUCHAR SectionBaseAddress;
+    SIZE_T SectionSize;
+
+    PUCHAR NextAddr;
+
+}ImageSectionInformation, *PImageSectionInformation;
+
+typedef struct ImageInformation {
+
+    PUCHAR Image_BaseAddress;
+    SIZE_T ImageSize;
+
+    UNICODE_STRING ImageName;
+
+    PImageSectionInformation SectionInfo_StartNode; // Section 정보
+
+    PUCHAR NextAddr; // next node
+
+}ImageInformation, *PImageInformation;
+
+#define ImageInformationNode_TAG 'IINT' // ImageInofrmationNodeTag
+
+NTSTATUS Get_ImageInformation_by_ProcessId(HANDLE ProcessId, PImageInformation* output);
+VOID Release_ImageInformation(PImageInformation input);
 
 #endif

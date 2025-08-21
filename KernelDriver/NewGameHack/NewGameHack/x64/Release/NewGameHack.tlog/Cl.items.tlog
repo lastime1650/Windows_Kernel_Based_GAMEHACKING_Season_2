@@ -1,3 +1,6 @@
+C:\Users\Administrator\source\repos\NewGameHack\NewGameHack\API.c;C:\Users\Administrator\source\repos\NewGameHack\NewGameHack\x64\Release\API.obj
+C:\Users\Administrator\source\repos\NewGameHack\NewGameHack\KEVENT_or_KMUTEX_init_logic.c;C:\Users\Administrator\source\repos\NewGameHack\NewGameHack\x64\Release\KEVENT_or_KMUTEX_init_logic.obj
+C:\Users\Administrator\source\repos\NewGameHack\NewGameHack\NotifyRoutines.c;C:\Users\Administrator\source\repos\NewGameHack\NewGameHack\x64\Release\NotifyRoutines.obj
 C:\Users\Administrator\source\repos\NewGameHack\NewGameHack\DeviceCreate.c;C:\Users\Administrator\source\repos\NewGameHack\NewGameHack\x64\Release\DeviceCreate.obj
 C:\Users\Administrator\source\repos\NewGameHack\NewGameHack\DLL_Injection.c;C:\Users\Administrator\source\repos\NewGameHack\NewGameHack\x64\Release\DLL_Injection.obj
 C:\Users\Administrator\source\repos\NewGameHack\NewGameHack\GetProcessAPIAddress.c;C:\Users\Administrator\source\repos\NewGameHack\NewGameHack\x64\Release\GetProcessAPIAddress.obj
@@ -9,5 +12,7 @@ C:\Users\Administrator\source\repos\NewGameHack\NewGameHack\MemScan.c;C:\Users\A
 C:\Users\Administrator\source\repos\NewGameHack\NewGameHack\MemWrite.c;C:\Users\Administrator\source\repos\NewGameHack\NewGameHack\x64\Release\MemWrite.obj
 C:\Users\Administrator\source\repos\NewGameHack\NewGameHack\New_main.c;C:\Users\Administrator\source\repos\NewGameHack\NewGameHack\x64\Release\New_main.obj
 C:\Users\Administrator\source\repos\NewGameHack\NewGameHack\PE_logic.c;C:\Users\Administrator\source\repos\NewGameHack\NewGameHack\x64\Release\PE_logic.obj
+C:\Users\Administrator\source\repos\NewGameHack\NewGameHack\PointerScan.c;C:\Users\Administrator\source\repos\NewGameHack\NewGameHack\x64\Release\PointerScan.obj
 C:\Users\Administrator\source\repos\NewGameHack\NewGameHack\Process.c;C:\Users\Administrator\source\repos\NewGameHack\NewGameHack\x64\Release\Process.obj
+C:\Users\Administrator\source\repos\NewGameHack\NewGameHack\ProcessMonitor.c;C:\Users\Administrator\source\repos\NewGameHack\NewGameHack\x64\Release\ProcessMonitor.obj
 C:\Users\Administrator\source\repos\NewGameHack\NewGameHack\VirtualMemory.c;C:\Users\Administrator\source\repos\NewGameHack\NewGameHack\x64\Release\VirtualMemory.obj

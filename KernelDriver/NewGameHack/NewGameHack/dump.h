@@ -31,6 +31,7 @@ typedef struct MemDump {
 	PUCHAR StartAddress; // 시작 주소
 	SIZE_T Size; // 덤프할 크기
 
+	BOOLEAN is_with_page_dump; // 페이지 덤프까지 할까요? 라는 요청
 
 	PMemDumpOutput Output;
 }MemDump, * PMemDump;

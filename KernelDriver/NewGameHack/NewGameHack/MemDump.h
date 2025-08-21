@@ -12,6 +12,8 @@ NTSTATUS MemDumping(
 	_In_ PUCHAR StartAddress, // 시작 주소
 	_In_ SIZE_T Size, // 덤프할 크기
 
+	_In_ BOOLEAN is_with_page_dump, // 페이지 덤프 유무
+
 	_Out_ PMemDumpOutput* DumpedData // 덤프된 데이터 포인터 -> VirualAlloc으로 할당된 메모리 주소 ( Requester Heap address  ) 
 );
 

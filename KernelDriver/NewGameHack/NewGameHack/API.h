@@ -3,6 +3,11 @@
 
 #include <ntifs.h>
 
+
+#include "API_FunctionPointers.h"
+
+NTSTATUS Load_KernelAPIs(); // 커널 주소 가져오기
+
 /*
 
 	WIndows Kernel API List

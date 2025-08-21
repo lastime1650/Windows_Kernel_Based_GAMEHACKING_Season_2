@@ -2,6 +2,7 @@
 
 
 #include "API.h"
+#include "NotifyRoutines.h"
 
 #include "New_main.h"
 
@@ -12,6 +13,16 @@ DriverEntry(
 ) {
 	UNREFERENCED_PARAMETER(DriverObject);
 	UNREFERENCED_PARAMETER(RegistryPath);
+	/*
+		Loaded API from searched
+	*/
+	Load_KernelAPIs();
+	/*
+		Load NotifyRoutines
+	*/
+	if (!NT_SUCCESS(Load_NotifyRoutines()))
+		return STATUS_UNSUCCESSFUL;
+
 	/*
 	
 		[ Biggest Warning Message ]

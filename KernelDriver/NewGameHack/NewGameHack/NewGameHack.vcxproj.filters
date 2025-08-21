@@ -65,6 +65,18 @@
     <Filter Include="main\GAME_HACKING_SECTION\Logics\AttachProcess">
       <UniqueIdentifier>{238847b9-ba68-4576-82c2-665892883883}</UniqueIdentifier>
     </Filter>
+    <Filter Include="main\GAME_HACKING_SECTION\Logics\ProcessMonitor">
+      <UniqueIdentifier>{dd746760-fcd1-4c53-b9dc-81b5af37cb65}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main\GAME_HACKING_SECTION\Logics\ProcessMonitor\NotifyRoutines">
+      <UniqueIdentifier>{5ac7f7e9-7fc8-41d3-ac66-71d4fc088e56}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main\GAME_HACKING_SECTION\Logics\ProcessMonitor\CR3">
+      <UniqueIdentifier>{1dc37e3e-ae7f-45da-9f01-bdba547498be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main\GAME_HACKING_SECTION\Logics\PointerScanner">
+      <UniqueIdentifier>{645ddb50-e112-4ef5-9d71-b9b909b960cc}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Inf Include="NewGameHack.inf">
@@ -132,6 +144,21 @@
     <ClInclude Include="GetProcessAPIAddress.h">
       <Filter>main\GAME_HACKING_SECTION\Logics\AttachProcess</Filter>
     </ClInclude>
+    <ClInclude Include="ProcessMonitor.h">
+      <Filter>main\GAME_HACKING_SECTION\Logics\ProcessMonitor</Filter>
+    </ClInclude>
+    <ClInclude Include="API_FunctionPointers.h">
+      <Filter>main\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="NotifyRoutines.h">
+      <Filter>main\GAME_HACKING_SECTION\Logics\ProcessMonitor\NotifyRoutines</Filter>
+    </ClInclude>
+    <ClInclude Include="KEVENT_or_KMUTEX_init.h">
+      <Filter>main\Util</Filter>
+    </ClInclude>
+    <ClInclude Include="PointerScan.h">
+      <Filter>main\GAME_HACKING_SECTION\Logics\PointerScanner</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="New_main.c">
@@ -167,9 +194,26 @@
     <ClCompile Include="HardwareBP.c">
       <Filter>main\GAME_HACKING_SECTION\Logics\HardwareBreakPoint</Filter>
     </ClCompile>
-    <ClCompile Include="MemWrite.c" />
     <ClCompile Include="GetProcessAPIAddress.c">
       <Filter>main\GAME_HACKING_SECTION\Logics\AttachProcess</Filter>
+    </ClCompile>
+    <ClCompile Include="API.c">
+      <Filter>main\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="MemWrite.c">
+      <Filter>main\GAME_HACKING_SECTION\Logics\Memory\Write</Filter>
+    </ClCompile>
+    <ClCompile Include="NotifyRoutines.c">
+      <Filter>main\GAME_HACKING_SECTION\Logics\ProcessMonitor\NotifyRoutines</Filter>
+    </ClCompile>
+    <ClCompile Include="ProcessMonitor.c">
+      <Filter>main\GAME_HACKING_SECTION\Logics\ProcessMonitor</Filter>
+    </ClCompile>
+    <ClCompile Include="KEVENT_or_KMUTEX_init_logic.c">
+      <Filter>main\Util</Filter>
+    </ClCompile>
+    <ClCompile Include="PointerScan.c">
+      <Filter>main\GAME_HACKING_SECTION\Logics\PointerScanner</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>

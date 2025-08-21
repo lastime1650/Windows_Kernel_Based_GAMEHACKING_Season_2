@@ -40,6 +40,24 @@ typedef struct _IMAGE_DOS_HEADER {
     LONG   e_lfanew;                 // File address of new exe header
 } IMAGE_DOS_HEADER__, * PIMAGE_DOS_HEADER__;
 
+
+#define IMAGE_SIZEOF_SHORT_NAME 8
+typedef struct _IMAGE_SECTION_HEADER__ {
+    CHAR    Name[IMAGE_SIZEOF_SHORT_NAME];
+    union {
+        ULONG32   PhysicalAddress;
+        ULONG32   VirtualSize;
+    } Misc;
+    ULONG32   VirtualAddress;
+    ULONG32   SizeOfRawData;
+    ULONG32   PointerToRawData;
+    ULONG32   PointerToRelocations;
+    ULONG32   PointerToLinenumbers;
+    USHORT    NumberOfRelocations;
+    USHORT    NumberOfLinenumbers;
+    ULONG32   Characteristics;
+} IMAGE_SECTION_HEADER__, * PIMAGE_SECTION_HEADER__;
+
 typedef struct _IMAGE_FILE_HEADER {
     USHORT  Machine;                 // Machine type
     USHORT  NumberOfSections;        // Number of sections

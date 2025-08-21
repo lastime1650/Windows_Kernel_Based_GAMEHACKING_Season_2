@@ -1,3 +1,4 @@
+#pragma warning(disable:4996)
 #include "PE_logic.h"
 #include "API.h"
 
@@ -192,4 +193,181 @@ EXIT2:
 	ObDereferenceObject(targetProcess);
 EXIT0:
 	return status;
+}
+
+
+NTSTATUS Get_ImageInformation_by_ProcessId(HANDLE ProcessId, PImageInformation* output) {
+	
+	NTSTATUS status = STATUS_UNSUCCESSFUL;
+
+	// STEP 1
+	PEPROCESS targetProcess = NULL;
+	status = PsLookupProcessByProcessId(ProcessId, &targetProcess);
+	if (!NT_SUCCESS(status))
+		goto EXIT0;
+
+	// STEP 2
+	KAPC_STATE APC_STATE;
+	KeStackAttachProcess(targetProcess, &APC_STATE);
+
+	// STEP 3
+	PPEB Peb = PsGetProcessPeb(targetProcess);
+	if (!Peb) {
+		status = STATUS_UNSUCCESSFUL;
+		goto EXIT1;
+	}
+
+
+	PImageInformation StartNode = NULL;
+	PImageInformation CurrentNode = NULL;
+
+	// find the dll
+	if (Peb->Ldr && Peb->Ldr->InMemoryOrderModuleList.Flink) {
+
+
+
+
+		PLIST_ENTRY ListHead = &Peb->Ldr->InMemoryOrderModuleList;
+		PLIST_ENTRY CurrentEntry = ListHead->Flink;
+
+
+		// STEP 4
+		while (CurrentEntry != ListHead) {
+
+			PLDR_DATA_TABLE_ENTRY LdrEntry = CONTAINING_RECORD(CurrentEntry, LDR_DATA_TABLE_ENTRY, InMemoryOrderLinks);
+
+			/*
+			
+			
+			
+			*/
+			// STEP 5
+			PIMAGE_DOS_HEADER__ DllDosHeader = (PIMAGE_DOS_HEADER__)LdrEntry->DllBase;
+			PIMAGE_NT_HEADERS64__ NtHeaders64 = (PIMAGE_NT_HEADERS64__)((PUCHAR)LdrEntry->DllBase + DllDosHeader->e_lfanew);
+
+			PIMAGE_SECTION_HEADER__ SectionHeader = (PIMAGE_SECTION_HEADER__)( (PUCHAR)&NtHeaders64->OptionalHeader + NtHeaders64->FileHeader.SizeOfOptionalHeader );
+			USHORT SectionNumber = NtHeaders64->FileHeader.NumberOfSections;
+
+			
+
+			PImageSectionInformation SectionStartNode = NULL;
+			PImageSectionInformation SectionCurrentNode = NULL;
+
+			
+;			for (USHORT i = 0; i < SectionNumber; i++) {
+				
+				PImageSectionInformation SectionInfo = ExAllocatePoolWithTag(NonPagedPool, sizeof(ImageSectionInformation), ImageInformationNode_TAG);
+				RtlZeroMemory(SectionInfo, sizeof(ImageSectionInformation));
+
+				// 1. Section Name
+				RtlCopyMemory(SectionInfo->SectionName, SectionHeader[i].Name, strlen(SectionHeader[i].Name)+1);
+
+				// 2. Section ImageBaseAddr
+				SectionInfo->SectionBaseAddress = (PUCHAR)( (PUCHAR)DllDosHeader + SectionHeader[i].VirtualAddress );
+
+				// 3. Section ImageSize
+				SectionInfo->SectionSize = SectionHeader[i].Misc.VirtualSize;
+
+				SectionInfo->NextAddr = NULL;
+
+				if (!SectionStartNode) {
+					SectionStartNode = SectionInfo;
+					SectionCurrentNode = SectionStartNode;
+				}
+				else {
+					SectionCurrentNode->NextAddr = (PUCHAR)SectionInfo;
+					SectionCurrentNode = SectionInfo;
+				}
+				
+
+			}
+
+
+			/*
+			
+			
+			
+			
+			*/
+
+
+			PImageInformation information = ExAllocatePoolWithTag(NonPagedPool, sizeof(ImageInformation), ImageInformationNode_TAG);
+
+			information->SectionInfo_StartNode = SectionStartNode;
+
+
+			// 1. Image Name
+			// 문자열 버퍼 할당
+			USHORT nameLen = LdrEntry->BaseDllName.Length;
+			information->ImageName.Length = nameLen;
+			information->ImageName.MaximumLength = nameLen + sizeof(WCHAR);
+			information->ImageName.Buffer = ExAllocatePoolWithTag(NonPagedPool, information->ImageName.MaximumLength, ImageInformationNode_TAG);
+
+			// 문자열 복사
+			if (information->ImageName.Buffer) {
+				RtlCopyUnicodeString(&information->ImageName, &LdrEntry->BaseDllName);
+			}
+
+			// 2. Image Baseaadress ( Virtual )
+			information->Image_BaseAddress = LdrEntry->DllBase;
+
+			// 3. Image of Size
+			information->ImageSize = LdrEntry->SizeOfImage;
+
+			information->NextAddr = NULL;
+
+
+			if (!StartNode) {
+				StartNode = information;
+				CurrentNode = StartNode;
+			}
+			else {
+				CurrentNode->NextAddr = (PUCHAR)information;
+				CurrentNode = information;
+			}
+
+			CurrentEntry = CurrentEntry->Flink;
+		}
+	}
+
+	*output = StartNode;
+
+EXIT1:
+	KeUnstackDetachProcess(&APC_STATE);
+EXIT0:
+	ObDereferenceObject(targetProcess);
+	return status;
+}
+VOID Release_ImageInformation(PImageInformation input) {
+
+	if (input) {
+		// 모듈 정보 해제
+		PImageInformation current = input;
+
+		while (current) {
+			
+
+			// 섹션 메모리 해제
+			PImageSectionInformation current_Section = current->SectionInfo_StartNode;
+			while (current_Section) {
+
+				PImageSectionInformation Next_Section = (PImageSectionInformation)current_Section->NextAddr;
+				ExFreePoolWithTag(current_Section, ImageInformationNode_TAG);
+
+				current_Section = Next_Section;
+			}
+
+
+			if (current->ImageName.Buffer) {
+				ExFreePoolWithTag(current->ImageName.Buffer, ImageInformationNode_TAG);
+			}
+
+			PImageInformation Next = (PImageInformation)current->NextAddr;
+			ExFreePoolWithTag(current, ImageInformationNode_TAG);
+
+			current = Next;
+		}
+	}
+
+
 }

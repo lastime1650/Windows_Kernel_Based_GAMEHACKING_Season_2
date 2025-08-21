@@ -43,7 +43,7 @@ typedef struct NewScan {
 
 typedef struct AddressScanned {
 	
-	BOOLEAN is_same;
+	int compared; // -1 이하: 두번쨰 인자값이 더 크다. 0: 둘 같다. 1 이상: 첫번쨰 인자값 더 크다. 
 
 	PUCHAR current_value; // 현재 값
 	SIZE_T current_value_size; // 
@@ -99,6 +99,56 @@ typedef struct AllScan {
 }AllScan, *PAllScan;
 
 
+
+/*
+	PointerScan
+*/
+
+
+
+typedef struct Pointers_ {
+
+	PUCHAR pointer; // pointer address
+	PUCHAR value; // pointer value ( it will be a next 'pointer' ) 
+	
+	PUCHAR NextNodeAddress;
+
+}Pointers, *PPointers;
+
+typedef struct PointerScannedNode_ {
+
+
+	WCHAR ImageName[260]; // allocated
+
+	PUCHAR ImageBaseAddress;
+	SIZE_T ImageSIze; 
+
+	PPointers NodeArray;// 포인터 동적할당형 배열 ( 인덱스로 탐색 )
+
+	PUCHAR NextAddress;
+
+}PointerScannedNode, *PPointerScannedNode;
+
+typedef struct _PointerScan {
+	// 입력 파라미터
+	HANDLE RequesterPID;
+	HANDLE TargetPID;
+
+	PVOID  TargetAddress;
+
+	UINT32 MaxDepth;
+	UINT32 NumThreads;
+
+	LONG_PTR MaxBaseOffset;
+	LONG_PTR MaxChainOffset;
+
+	UINT32 MinPointersInPeek; // 포인터 유효성 검사 옵션 추가
+
+
+
+	// 출력 파라미터
+	PPointerScannedNode Output;
+} PointerScan, * PPointerScan;
 
 
 #endif

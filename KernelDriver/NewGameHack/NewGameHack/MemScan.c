@@ -201,13 +201,7 @@ NTSTATUS AddressScanning(
 		KeUnstackDetachProcess(&APC_STATE);
 		goto EXIT_1;
 	}
-
-	if ( memcmp(TargetProcessAddress, value, value_size ) == 0 ) {
-		output.is_same = TRUE;
-	}
-	else {
-		output.is_same = FALSE;
-	}
+	output.compared = memcmp(TargetProcessAddress, value, value_size);// compare
 
 	KeUnstackDetachProcess(&APC_STATE);
 
