@@ -113,33 +113,36 @@ In addition, the features built a year ago have been **reinforced** and further 
 > 
 > **CR3 Brute-Forcing Basic Principle**
 >
-> 1. Acquire PEPROCESS
->    > Obtain the PEPROCESS structure of the target process.
+> 1. **Acquire PEPROCESS**  
+>    - Obtain the `PEPROCESS` of the target process.
 >
-> 2. Extract ImageBaseAddress
->    > Retrieve the ImageBaseAddress from the PEPROCESS.
+> 2. **Extract ImageBaseAddress from PEPROCESS**  
+>    - Retrieve the `ImageBaseAddress` from the PEPROCESS structure.
 >
-> 3. Split Base Virtual Address into Bits
->    > Break down the extracted base virtual address into individual bits.
+> 3. **Split Base Virtual Address into Bits**  
+>    - Split the ImageBaseAddress extracted in step (2) into **individual bits**.
 >
-> 4. Obtain Physical Memory Map & Calculate PFN Upper Limit
->    > Use the MmGetPhysicalMemoryRanges() API to get the full physical memory map.
->    > Calculate the upper limit of PFN (Page Frame Number).
+> 4. **Obtain Full Physical Page Map and Calculate PFN Upper Limit**  
+>    - Use the `MmGetPhysicalMemoryRanges()` API to get the full physical page map.  
+>    - Pre-calculate the upper limit of PFN (Page Frame Number).
 >
-> 5. Traverse Physical Memory Map
->    > Traverse the physical memory map from start to end using index-based iteration.
+> 5. **Traverse the Physical Page Map**  
+>    - Traverse the physical page map from start to end using **index-based iteration**.
 >
-> 6. CR3 Candidate Brute-Forcing
->    > Assume each PFN as CR3 and traverse the page tables (PML4 → PDP → PD → PT).
->    > Verify validity using the PFN upper limit and MmCopyMemory() API.
+> 6. **CR3 Candidate Brute-Forcing**  
+>    - Assume each PFN as **CR3** and reference the page tables.  
+>      ```
+>      PML4 -> PDP -> PD -> PT
+>      ```  
+>    - Use the PFN upper limit from step (4) and the `MmCopyMemory()` API to verify validity.
 >
-> 7. EXE File Verification & PEB Check
->    > If successful, convert to DOS header and check the signature.
->    > Assume CR3 is correct and retrieve PEB using the same traversal method.
->    > Finally, confirm that PEB's ImageBaseAddress matches the previously extracted address.
+> 7. **Verify EXE File and Check PEB**  
+>    - If step (6) is successful, convert to a DOS header and verify the signature to confirm the process EXE.  
+>    - Since collisions with other processes are possible, assume the CR3 is correct and retrieve the PEB using the same method (`PML4 -> PDP -> PD -> PT`).  
+>    - Finally, confirm that the PEB's `ImageBaseAddress` matches the address extracted in step (2).
 >
-> 8. Final CR3 Determination
->    > If all steps up to (7) succeed, the CR3 is determined to be 100% correct.
+> 8. **Final CR3 Determination**  
+>    - If step (7) is successful, the CR3 can be obtained with 100% certainty.
 >    
 > Code is **[Here](https://github.com/lastime1650/Windows_Kernel_Based_GAMEHACKING_Season_2/blob/b7101e6991da2b5bfaa9cde1f257387a3f0c5962/KernelDriver/NewGameHack/NewGameHack/UserProcess_Helper.c#L319)**
 
