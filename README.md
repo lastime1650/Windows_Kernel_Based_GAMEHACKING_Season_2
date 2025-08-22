@@ -109,6 +109,8 @@ In addition, the features built a year ago have been **reinforced** and further 
 > These measures are intended to prevent CR3 modulation of anti-cheats.
 >
 > **Theory**
+>
+> ![Alt test](https://github.com/lastime1650/Windows_Kernel_Based_GAMEHACKING_Season_2/blob/main/Images/Virtual_to_Physical.png)
 > CR3 Brute-Forcing Basic Principle
 >
 > 1. Acquire PEPROCESS
