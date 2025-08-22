@@ -1,5 +1,6 @@
 c:\users\administrator\source\repos\newgamehack\newgamehack\x64\release\vc143.pdb
 c:\users\administrator\source\repos\newgamehack\newgamehack\x64\release\virtualmemory.obj
+c:\users\administrator\source\repos\newgamehack\newgamehack\x64\release\userprocess_helper.obj
 c:\users\administrator\source\repos\newgamehack\newgamehack\x64\release\processmonitor.obj
 c:\users\administrator\source\repos\newgamehack\newgamehack\x64\release\process.obj
 c:\users\administrator\source\repos\newgamehack\newgamehack\x64\release\pointerscan.obj
@@ -16,6 +17,7 @@ c:\users\administrator\source\repos\newgamehack\newgamehack\x64\release\dll_inje
 c:\users\administrator\source\repos\newgamehack\newgamehack\x64\release\devicecreate.obj
 c:\users\administrator\source\repos\newgamehack\newgamehack\x64\release\notifyroutines.obj
 c:\users\administrator\source\repos\newgamehack\newgamehack\x64\release\kevent_or_kmutex_init_logic.obj
+c:\users\administrator\source\repos\newgamehack\newgamehack\x64\release\cr3_cache.obj
 c:\users\administrator\source\repos\newgamehack\newgamehack\x64\release\api.obj
 c:\users\administrator\source\repos\newgamehack\x64\release\newgamehack\newgamehack.cat
 c:\users\administrator\source\repos\newgamehack\x64\release\newgamehack.sys
@@ -27,8 +29,8 @@ c:\users\administrator\source\repos\newgamehack\newgamehack\x64\release\newgameh
 c:\users\administrator\source\repos\newgamehack\newgamehack\x64\release\newgamehack.tlog\cl.items.tlog
 c:\users\administrator\source\repos\newgamehack\newgamehack\x64\release\newgamehack.tlog\cl.read.1.tlog
 c:\users\administrator\source\repos\newgamehack\newgamehack\x64\release\newgamehack.tlog\cl.write.1.tlog
-c:\users\administrator\source\repos\newgamehack\newgamehack\x64\release\newgamehack.tlog\inf2cat-expand.32788.read.1.tlog
-c:\users\administrator\source\repos\newgamehack\newgamehack\x64\release\newgamehack.tlog\inf2cat-expand.32788.write.1.tlog
+c:\users\administrator\source\repos\newgamehack\newgamehack\x64\release\newgamehack.tlog\inf2cat-expand.30840.read.1.tlog
+c:\users\administrator\source\repos\newgamehack\newgamehack\x64\release\newgamehack.tlog\inf2cat-expand.30840.write.1.tlog
 c:\users\administrator\source\repos\newgamehack\newgamehack\x64\release\newgamehack.tlog\inf2cat-expand.read.1.tlog
 c:\users\administrator\source\repos\newgamehack\newgamehack\x64\release\newgamehack.tlog\inf2cat-expand.write.1.tlog
 c:\users\administrator\source\repos\newgamehack\newgamehack\x64\release\newgamehack.tlog\inf2cat.command.1.tlog
