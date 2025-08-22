@@ -39,6 +39,7 @@ typedef struct _PointerInfo {
 
 typedef struct _PointerPathNode {
     WCHAR moduleName[260];
+    PUCHAR ImageBaseAddress;
     ULONG_PTR baseAddressOffset;
     LONG_PTR* offsets; // [개선] 동적 할당된 오프셋 배열
     int depth;
@@ -121,6 +122,7 @@ BOOLEAN Backtrack(
             RtlCopyMemory(newNode->moduleName, currentModule->ImageName.Buffer, currentModule->ImageName.Length);
             newNode->moduleName[currentModule->ImageName.Length / sizeof(WCHAR)] = L'\0';
 
+			newNode->ImageBaseAddress = currentModule->Image_BaseAddress;
             newNode->baseAddressOffset = address_to_find - (ULONG_PTR)currentModule->Image_BaseAddress;
             newNode->depth = depth;
 
@@ -285,6 +287,8 @@ void ReconstructPathsIterative(
                 if (newNode) {
                     RtlZeroMemory(newNode, sizeof(PointerPathNode));
                     RtlStringCbCopyW(newNode->moduleName, sizeof(newNode->moduleName), currentImage->ImageName.Buffer);
+
+                    newNode->ImageBaseAddress = currentImage->Image_BaseAddress;
                     newNode->baseAddressOffset = currentNode.address - (ULONG_PTR)currentImage->Image_BaseAddress;
                     newNode->depth = currentNode.depth;
 
@@ -632,14 +636,13 @@ NTSTATUS PointerScanning(
             RtlZeroMemory(pointerArray, arraySize);
 
             RtlStringCbCopyW(newNode->ImageName, sizeof(newNode->ImageName), currentResult->moduleName);
-            newNode->ImageBaseAddress = (PUCHAR)currentResult->baseAddressOffset;
-            newNode->ImageSIze = currentResult->depth;
+            newNode->ImageBaseAddress = currentResult->ImageBaseAddress;
+			newNode->ImageBaseOffset = currentResult->baseAddressOffset;
+            newNode->PointerDepth = currentResult->depth;
             newNode->NodeArray = pointerArray;
 
             for (int i = 0; i < currentResult->depth; ++i) {
-                pointerArray[i].pointer = (PUCHAR)currentResult->offsets[i];
-                pointerArray[i].value = NULL;
-                pointerArray[i].NextNodeAddress = NULL;
+                pointerArray[i].pointer = currentResult->offsets[i];
             }
 
             if (!outListHead) {

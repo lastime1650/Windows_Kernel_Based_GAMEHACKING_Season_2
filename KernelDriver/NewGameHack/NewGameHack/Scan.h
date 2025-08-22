@@ -108,10 +108,7 @@ typedef struct AllScan {
 
 typedef struct Pointers_ {
 
-	PUCHAR pointer; // pointer address
-	PUCHAR value; // pointer value ( it will be a next 'pointer' ) 
-	
-	PUCHAR NextNodeAddress;
+	LONG_PTR pointer; // pointer address
 
 }Pointers, *PPointers;
 
@@ -120,8 +117,10 @@ typedef struct PointerScannedNode_ {
 
 	WCHAR ImageName[260]; // allocated
 
-	PUCHAR ImageBaseAddress;
-	SIZE_T ImageSIze; 
+	PUCHAR ImageBaseAddress; // 이미지 베이스
+	ULONG_PTR ImageBaseOffset; // 이미지 베이스에 붙은 "오프셋"
+
+	SIZE_T PointerDepth;
 
 	PPointers NodeArray;// 포인터 동적할당형 배열 ( 인덱스로 탐색 )
 

@@ -114,6 +114,7 @@
   <ItemGroup>
     <ClInclude Include="API.h" />
     <ClInclude Include="API_FunctionPointers.h" />
+    <ClInclude Include="CR3_Cache.h" />
     <ClInclude Include="KEVENT_or_KMUTEX_init.h" />
     <ClInclude Include="NotifyRoutines.h" />
     <ClInclude Include="DeviceCreate.h" />
@@ -133,6 +134,7 @@
     <ClInclude Include="PointerScan.h" />
     <ClInclude Include="Process.h" />
     <ClInclude Include="ProcessMonitor.h" />
+    <ClInclude Include="UserProcess_Helper.h" />
     <ClInclude Include="Scan.h" />
     <ClInclude Include="Share_IOCTL.h" />
     <ClInclude Include="VirtualMemory.h" />
@@ -140,6 +142,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="API.c" />
+    <ClCompile Include="CR3_Cache.c" />
     <ClCompile Include="KEVENT_or_KMUTEX_init_logic.c" />
     <ClCompile Include="NotifyRoutines.c" />
     <ClCompile Include="DeviceCreate.c" />
@@ -156,6 +159,7 @@
     <ClCompile Include="PointerScan.c" />
     <ClCompile Include="Process.c" />
     <ClCompile Include="ProcessMonitor.c" />
+    <ClCompile Include="UserProcess_Helper.c" />
     <ClCompile Include="VirtualMemory.c" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -30,7 +30,5 @@ PProcessMon SearchProcessMonNode(HANDLE ProcessId);
 VOID Remove_One_ProcessNode(PEPROCESS Process);
 VOID RemoveALLProcessNode();
 
-VOID AttachUserMode(PEPROCESS eprocess, PKAPC_STATE state);
-VOID DettachUserMode(PKAPC_STATE state);
 
 #endif

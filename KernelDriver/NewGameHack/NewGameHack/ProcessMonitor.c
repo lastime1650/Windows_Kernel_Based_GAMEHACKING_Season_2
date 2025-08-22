@@ -29,13 +29,13 @@ UINT64 Extract_CR3_from_process(PEPROCESS Process) {
 			CR3 -> 000000016CFE3000 
 			CR3 -> 000000013F3F8000 
 	
-	
+	*/
 	DbgPrintEx(
 		DPFLTR_IHVDRIVER_ID,
 		DPFLTR_ERROR_LEVEL,
 		" CR3 -> %p \n", CR3
 	);
-	*/
+	
 
 	return CR3;
 }
@@ -160,7 +160,7 @@ VOID PrintALLProcessMon() {
 		DbgPrintEx(
 			DPFLTR_IHVDRIVER_ID,
 			DPFLTR_ERROR_LEVEL,
-			" [ PID: %d, CR3: %p ] \n", current->ProcessId, current->CR3 
+			" [ PID: %d, CR3: %llX ] \n", current->ProcessId, current->CR3 
 		);
 
 
