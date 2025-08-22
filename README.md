@@ -1,3 +1,4 @@
+*면책 조항 ( disclaimer )* 
 
 *I strongly inform you that this is not for game hacking purposes (the title is just to attract attention (for publicity)), but for research purposes. You are solely responsible for its use.*
 
