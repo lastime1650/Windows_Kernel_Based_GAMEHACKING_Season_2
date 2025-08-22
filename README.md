@@ -107,11 +107,11 @@ In addition, the features built a year ago have been **reinforced** and further 
 > In addition, the user mode was always accessed through a valid CR3 and changed to Copy form.
 >
 > These measures are intended to prevent CR3 modulation of anti-cheats.
->
-> **Theory**
->
+> 
+> **Basic**
 > ![Alt test](https://github.com/lastime1650/Windows_Kernel_Based_GAMEHACKING_Season_2/blob/main/Images/Virtual_to_Physical.png)
-> CR3 Brute-Forcing Basic Principle
+> 
+> **CR3 Brute-Forcing Basic Principle**
 >
 > 1. Acquire PEPROCESS
 >    > Obtain the PEPROCESS structure of the target process.
@@ -140,6 +140,8 @@ In addition, the features built a year ago have been **reinforced** and further 
 >
 > 8. Final CR3 Determination
 >    > If all steps up to (7) succeed, the CR3 is determined to be 100% correct.
+>    
+> Code is **[Here](https://github.com/lastime1650/Windows_Kernel_Based_GAMEHACKING_Season_2/blob/b7101e6991da2b5bfaa9cde1f257387a3f0c5962/KernelDriver/NewGameHack/NewGameHack/UserProcess_Helper.c#L319)**
 
 > [!NOTE]
 > ### (2025-08-22 - 03:40(UTC +09:00) ) — * "Kernel Based Pointer Scanner is opened !"*
