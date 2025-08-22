@@ -108,12 +108,6 @@ In addition, the features built a year ago have been **reinforced** and further 
 >
 > These measures are intended to prevent CR3 modulation of anti-cheats.
 >
-> However, it may not work, because if the anti-cheat driver first controls CR3 at the time of OS boot, a deeper level of logic is needed.
-
-> [!NOTE]
-> ### (2025-08-22 - 03:40(UTC +09:00) ) — * "Kernel Based Pointer Scanner is opened !"*
-> I have implemented a "pointer scanner" that works on a kernel basis in version 2 of this season
->
 > **Theory**
 > CR3 Brute-Forcing Basic Principle
 >
@@ -144,6 +138,11 @@ In addition, the features built a year ago have been **reinforced** and further 
 >
 > 8. Final CR3 Determination
 >    > If all steps up to (7) succeed, the CR3 is determined to be 100% correct.
+
+> [!NOTE]
+> ### (2025-08-22 - 03:40(UTC +09:00) ) — * "Kernel Based Pointer Scanner is opened !"*
+> I have implemented a "pointer scanner" that works on a kernel basis in version 2 of this season
+>
 
 
 ---
