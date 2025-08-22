@@ -96,7 +96,7 @@ In addition, the features built a year ago have been **reinforced** and further 
 
 ## 📅 Updates
 
-> 📝 [!CAUTION]
+> [!CAUTION]
 > ### (2025-08-22 - 22:20(UTC +09:00) ) — * "Kernel logic has been changed to connect to the User Mode stack by referring to a **valid CR3 register** !"*
 > In addition, the `MMCopyVirtualMemory` API was completely removed, and the user mode was always accessed through a valid CR3 and changed to Copy form.
 >
