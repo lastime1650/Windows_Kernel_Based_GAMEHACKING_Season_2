@@ -85,7 +85,7 @@ In addition, the features built a year ago have been **reinforced** and further 
 6. **Memory ALL Scan** -> value to return all datas in gave that size
 7. **Pointer Scan**
 
-Internal_Func_1. Get Real User_Process CR3
+** Internal_Func_1. `Get Real User_Process CR3` **
 
 ---
 
