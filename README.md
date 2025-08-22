@@ -47,6 +47,9 @@ In addition, the features built a year ago have been **reinforced** and further 
 
 ## ⚙ so How can I use it?
 
+> [!TIP]
+> Before running the target process, you must run driver and API server_program .
+
 > [!IMPORTANT]
 > 
 > 1. Disabled HVCI
