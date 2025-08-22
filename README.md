@@ -114,7 +114,36 @@ In addition, the features built a year ago have been **reinforced** and further 
 > ### (2025-08-22 - 03:40(UTC +09:00) ) — * "Kernel Based Pointer Scanner is opened !"*
 > I have implemented a "pointer scanner" that works on a kernel basis in version 2 of this season
 >
-> Additionally, the .data and .rdata areas are implemented to simply extract paths in JSON-type APIs with a "fixed offset" for one variable address found in EXE and dll (except Windows System dll) loaded into target process memory.
+> **Theory**
+> CR3 Brute-Forcing Basic Principle
+>
+> 1. Acquire PEPROCESS
+>    > Obtain the PEPROCESS structure of the target process.
+>
+> 2. Extract ImageBaseAddress
+>    > Retrieve the ImageBaseAddress from the PEPROCESS.
+>
+> 3. Split Base Virtual Address into Bits
+>    > Break down the extracted base virtual address into individual bits.
+>
+> 4. Obtain Physical Memory Map & Calculate PFN Upper Limit
+>    > Use the MmGetPhysicalMemoryRanges() API to get the full physical memory map.
+>    > Calculate the upper limit of PFN (Page Frame Number).
+>
+> 5. Traverse Physical Memory Map
+>    > Traverse the physical memory map from start to end using index-based iteration.
+>
+> 6. CR3 Candidate Brute-Forcing
+>    > Assume each PFN as CR3 and traverse the page tables (PML4 → PDP → PD → PT).
+>    > Verify validity using the PFN upper limit and MmCopyMemory() API.
+>
+> 7. EXE File Verification & PEB Check
+>    > If successful, convert to DOS header and check the signature.
+>    > Assume CR3 is correct and retrieve PEB using the same traversal method.
+>    > Finally, confirm that PEB's ImageBaseAddress matches the previously extracted address.
+>
+> 8. Final CR3 Determination
+>    > If all steps up to (7) succeed, the CR3 is determined to be 100% correct.
 
 
 ---
