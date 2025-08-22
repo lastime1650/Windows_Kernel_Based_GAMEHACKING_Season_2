@@ -143,6 +143,7 @@ In addition, the features built a year ago have been **reinforced** and further 
 > ### (2025-08-22 - 03:40(UTC +09:00) ) — * "Kernel Based Pointer Scanner is opened !"*
 > I have implemented a "pointer scanner" that works on a kernel basis in version 2 of this season
 >
+> Additionally, the .data and .rdata areas are implemented to simply extract paths in JSON-type APIs with a "fixed offset" for one variable address found in EXE and dll (except Windows System dll) loaded into target process memory.
 
 
 ---
