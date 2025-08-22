@@ -56,6 +56,8 @@ In addition, the features built a year ago have been **reinforced** and further 
 >
 > **query tool** ---> **API SERVER** ---> **Windows Kernel Driver** ---> **Target Game EXE**
 
+> [!WARNING]
+> The kernel driver for this project did not consider Unload. (Reboot is required.)
 
 ## Disabled HVCI 
 
