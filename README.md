@@ -120,7 +120,7 @@ In addition, the features built a year ago have been **reinforced** and further 
 > **Basic**
 > ![Alt test](https://github.com/lastime1650/Windows_Kernel_Based_GAMEHACKING_Season_2/blob/main/Images/Virtual_to_Physical.png)
 > 
-> # **CR3 Brute-Forcing Basic Principle**
+> # **CR3 Brute-Force Processing**
 >
 > 1. **Acquire PEPROCESS**  
 >    - Obtain the `PEPROCESS` of the target process.
