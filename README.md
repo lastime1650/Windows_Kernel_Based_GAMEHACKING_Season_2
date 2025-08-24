@@ -12,7 +12,7 @@
 
 ---
 
-> [!NOTICE]
+> [!IMPORTANT]
 >
 > I'm currently considering adding hypervisor technology that is compatible with both AMD and INTEL to the kernel drivers in this repository
 > 
