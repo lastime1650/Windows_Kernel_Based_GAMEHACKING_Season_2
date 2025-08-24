@@ -14,7 +14,7 @@
 
 > [!IMPORTANT]
 >
-> I'm currently considering adding hypervisor technology that is compatible with both AMD and INTEL to the kernel drivers in this repository
+> I'm currently considering adding **`hypervisor`** technology that is compatible with both **`AMD`** and **`INTEL`** to the kernel drivers in this repository
 > 
 > If this is possible, I think we can experience a fun sight at Ring-1 level.
 
