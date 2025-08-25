@@ -21,11 +21,11 @@
 >
 > ![initial](https://github.com/lastime1650/Windows_Kernel_Based_GAMEHACKING_Season_2/blob/main/Images/HyperVisor2.png)
 >
-> Anti-Cheat Bypass & Kernel Access :=> **`HyperVisor`**
+> ## Anti-Cheat Bypass & Kernel Access :=> **`HyperVisor`**
 > 
-> GameProcess & User Access :=> **`KernelDriver`**
+> ## GameProcess & User Access :=> **`KernelDriver`**
 > 
-> User :=> **`API Server and Clients`**
+> ## User :=> **`API Server and Clients`**
 > 
 ---
 
