@@ -130,6 +130,8 @@ In addition, the features built a year ago have been **reinforced** and further 
 >
 > ## {TESTING} ( 2025-08-27 - 08:55(UTC +09:00)) - **"AMD (SVM) Hypervisor Based Kernel API Hooking"**
 > ![initial](https://github.com/lastime1650/Windows_Kernel_Based_GAMEHACKING_Season_2/blob/main/Images/HYPERVISOR11.png)
+>
+> ![inital](https://github.com/lastime1650/Windows_Kernel_Based_GAMEHACKING_Season_2/blob/main/Images/HYPERVISOR13.png)
 > 
 > Based on the hypervisor [sample code](https://github.com/sariaki/amd-hypervisor) running on AMD-based CPUs, I release the code that implements kernel API hooking using NPT's page fault. 
 > 
