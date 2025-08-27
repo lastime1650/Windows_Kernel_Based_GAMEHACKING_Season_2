@@ -106,7 +106,7 @@ In addition, the features built a year ago have been **reinforced** and further 
 
 ---
 
-### 🔹 In [Hypervisor](https://github.com/lastime1650/Windows_Kernel_Based_GAMEHACKING_Season_2/tree/main/Hypervisor/AMD) ( AMD-CPU [GPL 3.0 License by Hypervisor Sample ref](https://github.com/sariaki/amd-hypervisor?tab=GPL-3.0-1-ov-file) ) 
+### 🔹 In [Hypervisor](https://github.com/lastime1650/Windows_Kernel_Based_GAMEHACKING_Season_2/tree/main/Hypervisor/AMD)
 1. Kernel API Hooking ( NPF( NPT table Fault ) based )
 
 ---
