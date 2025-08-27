@@ -14,6 +14,64 @@ NTSTATUS Load_KernelAPIs(); // 커널 주소 가져오기
 
 */
 
+// 인터럽트 벡터 번호 얻기
+ULONG HalGetInterruptVector(
+    IN INTERFACE_TYPE  InterfaceType,
+    IN ULONG           BusNumber,
+    IN ULONG           BusInterruptLevel,
+    IN ULONG           BusInterruptVector,
+    OUT PKIRQL         Irql,
+    OUT PKAFFINITY     Affinity
+);
+
+NTKERNELAPI
+BOOLEAN
+KeInsertQueueApc(
+    IN PRKAPC Apc,
+    IN PVOID SystemArgument1,
+    IN PVOID SystemArgument2,
+    IN KPRIORITY Increment
+);
+
+typedef enum _KAPC_ENVIRONMENT {
+    OriginalApcEnvironment,
+    AttachedApcEnvironment,
+    CurrentApcEnvironment,
+    InsertApcEnvironment
+} KAPC_ENVIRONMENT, * PKAPC_ENVIRONMENT;
+
+typedef VOID(NTAPI* PKNORMAL_ROUTINE)(
+    IN PVOID NormalContext,       // 공식 문서 파라미터 이름
+    IN PVOID SystemArgument1,
+    IN PVOID SystemArgument2
+    );
+
+typedef VOID(*PKKERNEL_ROUTINE)(
+    IN struct _KAPC* Apc,
+    IN OUT PKNORMAL_ROUTINE* NormalRoutine, // 공식 문서 파라미터 이름
+    IN OUT PVOID* NormalContext,
+    IN OUT PVOID* SystemArgument1,
+    IN OUT PVOID* SystemArgument2
+    );
+
+typedef VOID(*PKRUNDOWN_ROUTINE)(
+    IN struct _KAPC* Apc
+    );
+
+
+
+// APC 초기화
+NTKERNELAPI VOID KeInitializeApc(
+    PKAPC Apc,
+    PRKTHREAD           Thread,
+    KAPC_ENVIRONMENT Environment,
+    PKKERNEL_ROUTINE KernelRoutine,
+    PKRUNDOWN_ROUTINE RundownRoutine,
+    PKNORMAL_ROUTINE NormalRoutine,
+    KPROCESSOR_MODE ProcessorMode,
+    PVOID NormalContext
+);
+
 // Create Kernel Driver Object
 NTSTATUS
 NTAPI

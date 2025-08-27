@@ -11,6 +11,7 @@ NTSTATUS RequiredRoutine(PDEVICE_OBJECT pDeviceObject, PIRP Irp) {
 
 #include "Share_IOCTL.h" // IOCTL Code Definitions
 
+#include "INIT.h"
 #include "PointerScan.h"
 #include "MemWrite.h"
 #include "MemDump.h"
@@ -32,6 +33,19 @@ NTSTATUS IOCTLRoutine(PDEVICE_OBJECT pDeviceObject, PIRP Irp) {
 	
 	switch (irpSp->Parameters.DeviceIoControl.IoControlCode)
 	{
+
+		case IOCTL_INIT:
+		{
+			PINIT Parameter = (PINIT)Irp->AssociatedIrp.SystemBuffer; // Get System Buffer
+			ULONG Parameter_Size = irpSp->Parameters.DeviceIoControl.InputBufferLength; // Get Input Buffer Length
+
+			Parameter->Output = INITALIZE_GAME_HACK(Parameter);
+
+
+			Irp->IoStatus.Information = Parameter_Size;
+			break;
+		}
+
 		case IOCTL_NEWSCAN:
 		{
 			// *동적 테스트 완료

@@ -112,9 +112,11 @@
     <FilesToPackage Include="$(TargetPath)" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="APC.h" />
     <ClInclude Include="API.h" />
     <ClInclude Include="API_FunctionPointers.h" />
     <ClInclude Include="CR3_Cache.h" />
+    <ClInclude Include="INIT.h" />
     <ClInclude Include="KEVENT_or_KMUTEX_init.h" />
     <ClInclude Include="NotifyRoutines.h" />
     <ClInclude Include="DeviceCreate.h" />
@@ -141,8 +143,10 @@
     <ClInclude Include="Write.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="APC.c" />
     <ClCompile Include="API.c" />
     <ClCompile Include="CR3_Cache.c" />
+    <ClCompile Include="INIT.c" />
     <ClCompile Include="KEVENT_or_KMUTEX_init_logic.c" />
     <ClCompile Include="NotifyRoutines.c" />
     <ClCompile Include="DeviceCreate.c" />

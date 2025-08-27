@@ -80,6 +80,12 @@
     <Filter Include="main\GAME_HACKING_SECTION\Get_Real_UserProcess_Information">
       <UniqueIdentifier>{16b19d20-c43f-44bc-9f3d-219987cb139f}</UniqueIdentifier>
     </Filter>
+    <Filter Include="main\GAME_HACKING_SECTION\APC">
+      <UniqueIdentifier>{2e68a8a9-16a4-4fbb-8c70-8c5af4065a24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="main\GAME_HACKING_SECTION\INITIALIZE">
+      <UniqueIdentifier>{a26572aa-0bb9-4d18-9ffd-b4cdb0ee6975}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <Inf Include="NewGameHack.inf">
@@ -168,6 +174,12 @@
     <ClInclude Include="UserProcess_Helper.h">
       <Filter>main\GAME_HACKING_SECTION\Get_Real_UserProcess_Information</Filter>
     </ClInclude>
+    <ClInclude Include="APC.h">
+      <Filter>main\GAME_HACKING_SECTION\APC</Filter>
+    </ClInclude>
+    <ClInclude Include="INIT.h">
+      <Filter>main\GAME_HACKING_SECTION\INITIALIZE</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="New_main.c">
@@ -229,6 +241,12 @@
     </ClCompile>
     <ClCompile Include="UserProcess_Helper.c">
       <Filter>main\GAME_HACKING_SECTION\Get_Real_UserProcess_Information</Filter>
+    </ClCompile>
+    <ClCompile Include="INIT.c">
+      <Filter>main\GAME_HACKING_SECTION\INITIALIZE</Filter>
+    </ClCompile>
+    <ClCompile Include="APC.c">
+      <Filter>main\GAME_HACKING_SECTION\APC</Filter>
     </ClCompile>
   </ItemGroup>
 </Project>
