@@ -147,6 +147,8 @@ In addition, the features built a year ago have been **reinforced** and further 
 > ![initial](https://github.com/lastime1650/Windows_Kernel_Based_GAMEHACKING_Season_2/blob/main/Images/APC1.png)
 >
 > I used APC to allow the kernel to pass data transfer events to the user mode (IOCTL requester) asynchronously.
+>
+> This is a medium that can deliver asynchronous events, such as hooking signals from the kernel or hypervisor, to the user mode!!!!
 
 
 ---
