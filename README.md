@@ -19,7 +19,7 @@
 > 
 > If this is possible, I think we can experience a fun sight at Ring-1 level. ( Type 2 )
 >
-> ![initial](https://github.com/lastime1650/Windows_Kernel_Based_GAMEHACKING_Season_2/blob/main/Images/HYPERVISOR10.png)
+> ![initial](https://github.com/lastime1650/Windows_Kernel_Based_GAMEHACKING_Season_2/blob/main/Images/HYPERVISOR12.png)
 >
 > ![initial](https://github.com/lastime1650/Windows_Kernel_Based_GAMEHACKING_Season_2/blob/main/Images/HyperVisor4.png)
 >
