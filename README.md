@@ -142,6 +142,15 @@ In addition, the features built a year ago have been **reinforced** and further 
 ---
 
 > [!NOTE]
+> ### (2025-08-28 - 05:06(UTC +09:00) ) — * "APC-Based Asynchronous User Mode Callback Implementation !"*
+>
+> ![initial](https://github.com/lastime1650/Windows_Kernel_Based_GAMEHACKING_Season_2/blob/main/Images/APC1.png)
+>
+> I used APC to allow the kernel to pass data transfer events to the user mode (IOCTL requester) asynchronously.
+
+
+---
+
 > ### (2025-08-22 - 03:40(UTC +09:00) ) — * "Kernel Based Pointer Scanner is opened !"*
 > I have implemented a "pointer scanner" that works on a kernel basis in version 2 of this season
 >
