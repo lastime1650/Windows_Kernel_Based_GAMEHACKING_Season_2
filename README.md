@@ -106,6 +106,11 @@ In addition, the features built a year ago have been **reinforced** and further 
 
 ---
 
+### 🔹 In Hypervisor ( AMD-CPU ) 
+1. Kernel API Hooking ( NPF( NPT table Fault ) based )
+
+---
+
 ### 🔹 In API Server (IOCTL Requester)
 1. **WebSocket API Server**
 2. **JSON Support**
@@ -121,9 +126,9 @@ In addition, the features built a year ago have been **reinforced** and further 
 
 > [!CAUTION]
 >
-> ### {TESTING} ( 2025-08-27 - 08:55(UTC +09:00)) - **"AMD (SVM) Hypervisor Based Kernel API Hooking"**
+> ## {TESTING} ( 2025-08-27 - 08:55(UTC +09:00)) - **"AMD (SVM) Hypervisor Based Kernel API Hooking"**
 >
-> Based on the hypervisor sample code running on AMD-based CPUs, we release the code that implements kernel API hooking using NPT's page fault. 
+> Based on the hypervisor [sample code](https://github.com/sariaki/amd-hypervisor) running on AMD-based CPUs, we release the code that implements kernel API hooking using NPT's page fault. 
 > 
 > At the end of the test process, we will further implement and complete the main kernel driver and communication process.
 >
