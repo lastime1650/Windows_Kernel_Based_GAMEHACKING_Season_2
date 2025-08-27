@@ -1,8 +1,10 @@
 ﻿  Building 'NewGameHack' with toolset 'WindowsKernelModeDriver10.0' and the 'Universal' target platform.
   Stamping x64\Release\NewGameHack.inf
-  Stamping [Version] section with DriverVer=08/23/2025,2.28.10.336
+  Stamping [Version] section with DriverVer=08/28/2025,4.54.3.996
+  APC.c
   API.c
   CR3_Cache.c
+  INIT.c
   KEVENT_or_KMUTEX_init_logic.c
   NotifyRoutines.c
   DeviceCreate.c
@@ -19,6 +21,8 @@
   PointerScan.c
   Process.c
   ProcessMonitor.c
+  코드를 생성하고 있습니다...
+  컴파일하고 있습니다...
   UserProcess_Helper.c
   VirtualMemory.c
   코드를 생성하고 있습니다...

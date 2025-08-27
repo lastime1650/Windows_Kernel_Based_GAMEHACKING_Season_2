@@ -1,5 +1,7 @@
+C:\Users\Administrator\source\repos\NewGameHack\NewGameHack\APC.c;C:\Users\Administrator\source\repos\NewGameHack\NewGameHack\x64\Release\APC.obj
 C:\Users\Administrator\source\repos\NewGameHack\NewGameHack\API.c;C:\Users\Administrator\source\repos\NewGameHack\NewGameHack\x64\Release\API.obj
 C:\Users\Administrator\source\repos\NewGameHack\NewGameHack\CR3_Cache.c;C:\Users\Administrator\source\repos\NewGameHack\NewGameHack\x64\Release\CR3_Cache.obj
+C:\Users\Administrator\source\repos\NewGameHack\NewGameHack\INIT.c;C:\Users\Administrator\source\repos\NewGameHack\NewGameHack\x64\Release\INIT.obj
 C:\Users\Administrator\source\repos\NewGameHack\NewGameHack\KEVENT_or_KMUTEX_init_logic.c;C:\Users\Administrator\source\repos\NewGameHack\NewGameHack\x64\Release\KEVENT_or_KMUTEX_init_logic.obj
 C:\Users\Administrator\source\repos\NewGameHack\NewGameHack\NotifyRoutines.c;C:\Users\Administrator\source\repos\NewGameHack\NewGameHack\x64\Release\NotifyRoutines.obj
 C:\Users\Administrator\source\repos\NewGameHack\NewGameHack\DeviceCreate.c;C:\Users\Administrator\source\repos\NewGameHack\NewGameHack\x64\Release\DeviceCreate.obj
