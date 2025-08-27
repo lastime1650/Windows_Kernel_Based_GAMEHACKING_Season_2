@@ -106,7 +106,7 @@ In addition, the features built a year ago have been **reinforced** and further 
 
 ---
 
-### 🔹 In Hypervisor ( AMD-CPU ) 
+### 🔹 In Hypervisor ( AMD-CPU [GPL 3.0 License by Hypervisor Sample ref](https://github.com/sariaki/amd-hypervisor?tab=GPL-3.0-1-ov-file) ) 
 1. Kernel API Hooking ( NPF( NPT table Fault ) based )
 
 ---
