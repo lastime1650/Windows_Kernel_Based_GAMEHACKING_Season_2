@@ -93,7 +93,7 @@ In addition, the features built a year ago have been **reinforced** and further 
 
 ## 🚀 Features
 
-### 🔹 In Kernel
+### 🔹 In [Kernel](https://github.com/lastime1650/Windows_Kernel_Based_GAMEHACKING_Season_2/tree/main/KernelDriver/NewGameHack)
 1. **Kernel-Based DLL Injection**
 2. **Memory Scan** 
 3. **Memory Write** *(with Force Mode)*
@@ -106,12 +106,12 @@ In addition, the features built a year ago have been **reinforced** and further 
 
 ---
 
-### 🔹 In Hypervisor ( AMD-CPU [GPL 3.0 License by Hypervisor Sample ref](https://github.com/sariaki/amd-hypervisor?tab=GPL-3.0-1-ov-file) ) 
+### 🔹 In [Hypervisor](https://github.com/lastime1650/Windows_Kernel_Based_GAMEHACKING_Season_2/tree/main/Hypervisor/AMD) ( AMD-CPU [GPL 3.0 License by Hypervisor Sample ref](https://github.com/sariaki/amd-hypervisor?tab=GPL-3.0-1-ov-file) ) 
 1. Kernel API Hooking ( NPF( NPT table Fault ) based )
 
 ---
 
-### 🔹 In API Server (IOCTL Requester)
+### 🔹 In [API Server](https://github.com/lastime1650/Windows_Kernel_Based_GAMEHACKING_Season_2/tree/main/API_Server) (IOCTL Requester)
 1. **WebSocket API Server**
 2. **JSON Support**
 3. **WebServer on API Server** (coming soon)
