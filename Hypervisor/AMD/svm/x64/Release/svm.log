@@ -1,0 +1,25 @@
+﻿C:\Users\Administrator\Desktop\amd-hypervisor-main\svm\svm.vcxproj(117,5): warning MSB4011: "C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\BuildCustomizations\masm.props"을(를) 다시 가져올 수 없습니다. "C:\Program Files (x86)\Windows Kits\10\build\10.0.26100.0\WindowsDriver.Shared.props(364,3)"에서 이미 가져왔습니다. 이는 빌드 작성 오류일 가능성이 높으며 이 후속 가져오기는 무시됩니다. 
+C:\Users\Administrator\Desktop\amd-hypervisor-main\svm\svm.vcxproj(214,5): warning MSB4011: "C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\BuildCustomizations\masm.targets"을(를) 다시 가져올 수 없습니다. "C:\Program Files (x86)\Windows Kits\10\build\10.0.26100.0\WindowsDriver.common.targets(2008,3)"에서 이미 가져왔습니다. 이는 빌드 작성 오류일 가능성이 높으며 이 후속 가져오기는 무시됩니다. 
+  Building 'svm' with toolset 'WindowsKernelModeDriver10.0' and the 'Universal' target platform.
+  Assembling svm\util\AsmHandlers.asm...
+  Assembling svm\VMCALL_.asm...
+  Assembling svm\vmenter.asm...
+  main.cpp
+  cpuid.cpp
+  vmexit.cpp
+  msr.cpp
+  rdtsc.cpp
+  코드를 생성하고 있습니다...
+  svm.cpp
+  util.cpp
+  svm.vcxproj -> C:\Users\Administrator\Desktop\amd-hypervisor-main\x64\Release\svm.sys
+C:\Users\Administrator\Desktop\amd-hypervisor-main\svm\svm.vcxproj(117,5): warning MSB4011: "C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\BuildCustomizations\masm.props"을(를) 다시 가져올 수 없습니다. "C:\Program Files (x86)\Windows Kits\10\build\10.0.26100.0\WindowsDriver.Shared.props(364,3)"에서 이미 가져왔습니다. 이는 빌드 작성 오류일 가능성이 높으며 이 후속 가져오기는 무시됩니다. 
+C:\Users\Administrator\Desktop\amd-hypervisor-main\svm\svm.vcxproj(214,5): warning MSB4011: "C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\BuildCustomizations\masm.targets"을(를) 다시 가져올 수 없습니다. "C:\Program Files (x86)\Windows Kits\10\build\10.0.26100.0\WindowsDriver.common.targets(2008,3)"에서 이미 가져왔습니다. 이는 빌드 작성 오류일 가능성이 높으며 이 후속 가져오기는 무시됩니다. 
+  Done Adding Additional Store
+  Successfully signed: C:\Users\Administrator\Desktop\amd-hypervisor-main\x64\Release\svm.sys
+  
+  Driver is 'Universal'.
+C:\Users\Administrator\Desktop\amd-hypervisor-main\svm\svm.vcxproj(117,5): warning MSB4011: "C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\BuildCustomizations\masm.props"을(를) 다시 가져올 수 없습니다. "C:\Program Files (x86)\Windows Kits\10\build\10.0.26100.0\WindowsDriver.Shared.props(364,3)"에서 이미 가져왔습니다. 이는 빌드 작성 오류일 가능성이 높으며 이 후속 가져오기는 무시됩니다. 
+C:\Users\Administrator\Desktop\amd-hypervisor-main\svm\svm.vcxproj(214,5): warning MSB4011: "C:\Program Files\Microsoft Visual Studio\2022\Community\MSBuild\Microsoft\VC\v170\BuildCustomizations\masm.targets"을(를) 다시 가져올 수 없습니다. "C:\Program Files (x86)\Windows Kits\10\build\10.0.26100.0\WindowsDriver.common.targets(2008,3)"에서 이미 가져왔습니다. 이는 빌드 작성 오류일 가능성이 높으며 이 후속 가져오기는 무시됩니다. 
+  'pwsh.exe'은(는) 내부 또는 외부 명령, 실행할 수 있는 프로그램, 또는
+  배치 파일이 아닙니다.

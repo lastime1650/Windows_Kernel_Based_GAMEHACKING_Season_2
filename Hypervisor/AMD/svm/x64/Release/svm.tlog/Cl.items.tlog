@@ -1,0 +1,7 @@
+C:\Users\Administrator\Desktop\amd-hypervisor-main\svm\main.cpp;C:\Users\Administrator\Desktop\amd-hypervisor-main\svm\x64\Release\main.obj
+C:\Users\Administrator\Desktop\amd-hypervisor-main\svm\svm\handlers\cpuid.cpp;C:\Users\Administrator\Desktop\amd-hypervisor-main\svm\x64\Release\svm\handlers\cpuid.obj
+C:\Users\Administrator\Desktop\amd-hypervisor-main\svm\svm\handlers\vmexit.cpp;C:\Users\Administrator\Desktop\amd-hypervisor-main\svm\x64\Release\svm\handlers\vmexit.obj
+C:\Users\Administrator\Desktop\amd-hypervisor-main\svm\svm\handlers\msr.cpp;C:\Users\Administrator\Desktop\amd-hypervisor-main\svm\x64\Release\svm\handlers\msr.obj
+C:\Users\Administrator\Desktop\amd-hypervisor-main\svm\svm\handlers\rdtsc.cpp;C:\Users\Administrator\Desktop\amd-hypervisor-main\svm\x64\Release\svm\handlers\rdtsc.obj
+C:\Users\Administrator\Desktop\amd-hypervisor-main\svm\svm\svm.cpp;C:\Users\Administrator\Desktop\amd-hypervisor-main\svm\x64\Release\svm\svm.obj
+C:\Users\Administrator\Desktop\amd-hypervisor-main\svm\svm\util\util.cpp;C:\Users\Administrator\Desktop\amd-hypervisor-main\svm\x64\Release\svm\util\util.obj
