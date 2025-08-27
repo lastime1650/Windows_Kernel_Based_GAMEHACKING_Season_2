@@ -128,10 +128,11 @@ In addition, the features built a year ago have been **reinforced** and further 
 >
 > ## {TESTING} ( 2025-08-27 - 08:55(UTC +09:00)) - **"AMD (SVM) Hypervisor Based Kernel API Hooking"**
 >
-> Based on the hypervisor [sample code](https://github.com/sariaki/amd-hypervisor) running on AMD-based CPUs, we release the code that implements kernel API hooking using NPT's page fault. 
+> Based on the hypervisor [sample code](https://github.com/sariaki/amd-hypervisor) running on AMD-based CPUs, I release the code that implements kernel API hooking using NPT's page fault. 
 > 
-> At the end of the test process, we will further implement and complete the main kernel driver and communication process.
+> At the end of the test process, I will further implement and complete the main kernel driver and communication process.
 >
+> Because I created a hypervisor based on that sample code, the `GPL-3.0` license is enforced, so it exists independently in the `Hypervisor/AMD` folder as a "separate kernel driver" folder.
 
 ---
 
