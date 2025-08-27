@@ -120,7 +120,25 @@ In addition, the features built a year ago have been **reinforced** and further 
 ## 📅 Updates
 
 > [!CAUTION]
-> ### {BETA} (2025-08-22 - 22:20(UTC +09:00) ) — * "(Physical Memory Page Based) Kernel logic has been changed to connect to the User Mode stack by referring to a **valid CR3 register** !"*
+>
+> ### {TESTING} ( 2025-08-27 - 08:55(UTC +09:00)) - **"AMD (SVM) Hypervisor Based Kernel API Hooking"**
+>
+> Based on the hypervisor sample code running on AMD-based CPUs, we release the code that implements kernel API hooking using NPT's page fault. 
+> 
+> At the end of the test process, we will further implement and complete the main kernel driver and communication process.
+>
+
+---
+
+> [!NOTE]
+> ### (2025-08-22 - 03:40(UTC +09:00) ) — * "Kernel Based Pointer Scanner is opened !"*
+> I have implemented a "pointer scanner" that works on a kernel basis in version 2 of this season
+>
+> Additionally, the .data and .rdata areas are implemented to simply extract paths in JSON-type APIs with a "fixed offset" for one variable address found in EXE and dll (except Windows System dll) loaded into target process memory.
+
+---
+
+> ### (2025-08-22 - 22:20(UTC +09:00) ) — * "(Physical Memory Page Based) Kernel logic has been changed to connect to the User Mode stack by referring to a **valid CR3 register** !"*
 > In addition, the user mode was always accessed through a valid CR3 and changed to Copy form.
 >
 > These measures are intended to prevent CR3 modulation of anti-cheats.
@@ -162,13 +180,6 @@ In addition, the features built a year ago have been **reinforced** and further 
 >    - If step (7) is successful, the CR3 can be obtained with 100% certainty.
 >    
 > Code is **[Here](https://github.com/lastime1650/Windows_Kernel_Based_GAMEHACKING_Season_2/blob/b7101e6991da2b5bfaa9cde1f257387a3f0c5962/KernelDriver/NewGameHack/NewGameHack/UserProcess_Helper.c#L319)**
-
-> [!NOTE]
-> ### (2025-08-22 - 03:40(UTC +09:00) ) — * "Kernel Based Pointer Scanner is opened !"*
-> I have implemented a "pointer scanner" that works on a kernel basis in version 2 of this season
->
-> Additionally, the .data and .rdata areas are implemented to simply extract paths in JSON-type APIs with a "fixed offset" for one variable address found in EXE and dll (except Windows System dll) loaded into target process memory.
-
 
 ---
 
