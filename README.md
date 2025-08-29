@@ -12,25 +12,6 @@
 
 ---
 
-> [!IMPORTANT]
->
-> # 2025 08 24 ~
-> I'm currently considering adding **`hypervisor`** technology that is compatible with both **`AMD`** and **`INTEL`** to the kernel drivers in this repository
-> 
-> If this is possible, I think we can experience a fun sight at Ring-1 level. ( Type 2 )
->
-> ![initial](https://github.com/lastime1650/Windows_Kernel_Based_GAMEHACKING_Season_2/blob/main/Images/HYPERVISOR12.png)
->
-> ![initial](https://github.com/lastime1650/Windows_Kernel_Based_GAMEHACKING_Season_2/blob/main/Images/HyperVisor4.png)
->
-> ## Anti-Cheat Bypass & Kernel Access :=> **`HyperVisor`**
-> 
-> ## GameProcess & User Access :=> **`KernelDriver`**
-> 
-> ## User :=> **`API Server and Clients`**
-> 
----
-
 # 🖥 `64Bit` Windows Kernel-Based GAMEHACKING Season 2  
 
 <a href="https://opensource.org/">
