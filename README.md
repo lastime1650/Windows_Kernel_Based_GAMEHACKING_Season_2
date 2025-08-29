@@ -48,7 +48,7 @@ This version aims to **implement the maximum capabilities possible in a Windows 
 ---
 
 ## 📌 Welcome
-![Windows KernelBased GAMEHACK Logo](https://github.com/lastime1650/Windows_Kernel_Based_GAMEHACKING_Season_2/blob/main/Images/Windows_KernelBased_GAMEHACK_LOGO.png)
+![Windows KernelBased GAMEHACK Logo](https://github.com/lastime1650/Windows_Kernel_Based_GAMEHACKING_Season_2/blob/main/Images/New_Project1.png)
 
 ---
 
