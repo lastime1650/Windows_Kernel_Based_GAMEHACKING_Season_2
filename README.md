@@ -111,7 +111,7 @@ In addition, the features built a year ago have been **reinforced** and further 
 
 > [!NOTE]
 > ## (2025-08-29 - 13:00(UTC +09:00) ) — * "Hypervisor Level has been started!"*
-> Now I'm out of the kernel level, and I've written a `Hypervisor level` beta that works on Ring-1.
+> Now I'm out of the kernel level, and I've written an `Hypervisor level` beta that works on Ring-1.
 >
 > ### How to share data across different levels ??
 > There are so many different ways of doing this, but I introduce the following logic.
