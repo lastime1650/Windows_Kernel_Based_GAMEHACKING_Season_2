@@ -53,7 +53,7 @@ This version aims to implement the maximum functionality possible with **Windows
 ---
 
 ## ⚙ How It Works?
-![Architecture](https://github.com/lastime1650/Windows_Kernel_Based_GAMEHACKING_Season_2/blob/main/Images/SimpleArch.png)
+![Architecture](https://github.com/lastime1650/Windows_Kernel_Based_GAMEHACKING_Season_2/blob/main/Images/New_Project1.png)
 
 Previously, **MFC** was used, but now it has been replaced with an **API server** approach for a more user-friendly experience.  
 For example, a **WebSocket-based API** is provided, allowing access to the Windows kernel directly from **Python**.
