@@ -58,7 +58,7 @@ This version aims to implement the maximum functionality possible with **Windows
 Previously, **MFC** was used, but now it has been replaced with an **API server** approach for a more user-friendly experience.  
 For example, a **WebSocket-based API** is provided, allowing access to the Windows kernel directly from **Python**.
 
-> **Goal:** Enable **high-level control** over the Windows kernel.
+> **Goal:** Enable **high-level control** over the Windows kernel and Hypervisor.
 
 In addition, the features built a year ago have been **reinforced** and further developed so that the kernel can interact **more aggressively** with user space.
 
@@ -72,7 +72,7 @@ In addition, the features built a year ago have been **reinforced** and further 
 > [!IMPORTANT]
 > 
 > 1. Disabled HVCI
-> 2. Load [KernelDriver](https://github.com/lastime1650/Windows_Kernel_Based_GAMEHACKING_Season_2/tree/main/KernelDriver/NewGameHack/x64/Release/NewGameHack) with [KDUMapper](https://github.com/hfiref0x/KDU)
+> 2. Load [KernelDriver](https://github.com/lastime1650/Windows_Kernel_Based_GAMEHACKING_Season_2/tree/main/KernelDriver/NewGameHack/x64/Release/NewGameHack) and [Hypervisor](https://github.com/lastime1650/Windows_Kernel_Based_GAMEHACKING_Season_2/tree/main/Hypervisor) with [KDUMapper](https://github.com/hfiref0x/KDU)
 > 3. Execute the [API_server](https://github.com/lastime1650/Windows_Kernel_Based_GAMEHACKING_Season_2/tree/main/API_Server/GameHackClient/x64/Debug)
 > 4. and then, you should be made a query tool (query to `API SERVER` in JSON format) ( Python ,, etc,, ) enjoy!
 > 5. if you have some bug ( BSOD ), call me !
@@ -111,7 +111,7 @@ In addition, the features built a year ago have been **reinforced** and further 
 ---
 
 ### 🔹 In [Hypervisor](https://github.com/lastime1650/Windows_Kernel_Based_GAMEHACKING_Season_2/tree/main/Hypervisor/AMD)
-1. Kernel API Hooking ( NPF( NPT table Fault ) based )
+1. Kernel API Hooking ( AMD - NPF( NPT table Fault ) based )
 
 ---
 
@@ -128,9 +128,34 @@ In addition, the features built a year ago have been **reinforced** and further 
 
 ## 📅 Updates
 
-> [!CAUTION]
+> [!NOTE]
+> ## (2025-08-29 - 13:00(UTC +09:00) ) — * "Hypervisor Level has been started!"*
+> Now I'm out of the kernel level, and I've written a `Hypervisor level` beta that works on Ring-1.
 >
-> ## {TESTING} ( 2025-08-27 - 08:55(UTC +09:00)) - **"AMD (SVM) Hypervisor Based Kernel API Hooking"**
+> ### How to share data across different levels ??
+> There are so many different ways of doing this, but I introduce the following logic.
+>
+> ## [ KERNEL <-> HYPERVISOR ] Using a Interrupt
+> ![initial](https://github.com/lastime1650/Windows_Kernel_Based_GAMEHACKING_Season_2/blob/main/Images/HYPERVISOR20.png)
+>
+> When a VM-EXIT handler that supports virtualization returns a task, it deliberately generates an interrupt through the "Interrupt Vector ID" value obtained during initialization from the kernel. 
+> 
+> `"The Hypervisor must then convert the physical address that the kernel already knows to the physical address of the Hypervisor and then the virtual address of the Hypervisor to update the value."`
+>
+> 
+> The preregistered Interrupt handler in the kernel is then asynchronously invoked by Hypervisor. 
+> 
+> Because it supports multi-core, the number of cores can be used as an index to refer to valid data, which can then be transmitted to Usermode via APC.'
+>
+> ## [ KERNEL <==(1:1 mapped physical memory area)==> HYPERVISOR ] Using the Kernel Allocated Physical Addresses Area
+> ![initial](https://github.com/lastime1650/Windows_Kernel_Based_GAMEHACKING_Season_2/blob/main/Images/HYPERVISOR21.png)
+> 
+> I implemented the Host Physical Address of the hypervisor with 1:1 mapping of the Guest Physical Address of the kernel in a form that the hypervisor can refer to and write.
+> `The hypervisor is implemented to allocate no memory, and the kernel does not understand the space allocated by the hypervisor. This situation complicates the logic of releasing memory somewhat.`
+
+---
+
+> ### ( 2025-08-27 - 08:55(UTC +09:00)) - **"AMD (SVM) Hypervisor Based Kernel API Hooking"**
 > ![initial](https://github.com/lastime1650/Windows_Kernel_Based_GAMEHACKING_Season_2/blob/main/Images/HYPERVISOR11.png)
 >
 > ![inital](https://github.com/lastime1650/Windows_Kernel_Based_GAMEHACKING_Season_2/blob/main/Images/HYPERVISOR13.png)
@@ -143,7 +168,7 @@ In addition, the features built a year ago have been **reinforced** and further 
 
 ---
 
-> [!NOTE]
+
 > ### (2025-08-28 - 05:06(UTC +09:00) ) — * "APC-Based Asynchronous User Mode Callback Implementation !"*
 >
 > ![initial](https://github.com/lastime1650/Windows_Kernel_Based_GAMEHACKING_Season_2/blob/main/Images/APC1.png)
