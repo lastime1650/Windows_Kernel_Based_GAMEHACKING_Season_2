@@ -43,12 +43,12 @@
 ---
 
 **Game Hacking Season 2** is now released!  
-This version aims to **implement the maximum capabilities possible in a Windows kernel driver** while allowing the `IOCTL` requester (User Program) to send commands easily to the kernel using **JSON**.
+This version aims to implement the maximum functionality possible with **Windows kernel drivers and Hypervisor**, while using **JSON** to make it easier for 'IOCTL' requesters (user programs) to send commands to the kernel and Hypervisor.
 
 ---
 
 ## 📌 Welcome
-![Windows KernelBased GAMEHACK Logo](https://github.com/lastime1650/Windows_Kernel_Based_GAMEHACKING_Season_2/blob/main/Images/New_Project1.png)
+![Windows KernelBased GAMEHACK Logo](https://github.com/lastime1650/Windows_Kernel_Based_GAMEHACKING_Season_2/blob/main/Images/LOGO2.png)
 
 ---
 
